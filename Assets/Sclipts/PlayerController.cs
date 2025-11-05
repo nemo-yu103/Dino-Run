@@ -9,14 +9,14 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        jumpForce = 5f;
+        jumpForce = 7f;
         HP = 3;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             Jump();
         }
@@ -35,17 +35,23 @@ public class PlayerController : MonoBehaviour
         {
             isGround = true;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //É_ÉÅÅ[ÉWÇéÛÇØÇÈ
         if (collision.gameObject.CompareTag("Enemy"))
         {
             HP -= 1;
-            if(HP == 0)
+
+            if (HP == 0)
             {
                 GameOver();
             }
         }
 
     }
+
 
     void GameOver()
     {
