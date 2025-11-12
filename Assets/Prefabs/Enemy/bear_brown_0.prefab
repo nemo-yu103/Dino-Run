@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 8723738788070776325}
   - component: {fileID: 2975192649427504536}
   - component: {fileID: 8143923302501895755}
+  - component: {fileID: 674929031721522668}
   m_Layer: 0
   m_Name: bear_brown_0
   m_TagString: Enemy
@@ -119,7 +120,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 1.6888502, y: -1.80306, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: -6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1923587029957916093}
@@ -251,3 +252,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.27, y: 0.19}
   m_EdgeRadius: 0
+--- !u!114 &674929031721522668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874820501500894081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da355d672af7cbd4f8e2d23af8b42682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController

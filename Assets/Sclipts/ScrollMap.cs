@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class ScrollMap : MonoBehaviour
 {
-    public float scrollSpeed = 5f;
-    public float resetPositionX = -20f;
-    public float startPositionX = 20f;
+    public float scrollSpeed;
+    public float resetPositionX;
+    public float startPositionX;
 
     void Start()
     {
-        
+        scrollSpeed = 4f;
+        resetPositionX = -17.25f;
+        startPositionX = 3f;
     }
 
     void Update()

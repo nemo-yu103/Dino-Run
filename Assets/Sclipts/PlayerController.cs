@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.Scripting;
 
 public class PlayerController : MonoBehaviour
 {
     public float jumpForce;
     public int HP;
     private bool isGround = true;
+    public int getCoin = 0;
     Rigidbody2D rb;
 
     void Start()
     {
         jumpForce = 7f;
-        HP = 3;
+        HP = 5;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -42,16 +44,30 @@ public class PlayerController : MonoBehaviour
         //É_ÉÅÅ[ÉWÇéÛÇØÇÈ
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            HP -= 1;
+            Damage();
+        }
 
-            if (HP == 0)
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            Destroy(collision.gameObject);
+            if (collision.gameObject.name == "coin(Clone)")
             {
-                GameOver();
+                getCoin++;
             }
+            Debug.Log(getCoin);
         }
 
     }
 
+    public void Damage()
+    {
+        HP -= 1;
+        if(HP == 0)
+        {
+            GameOver();
+        }
+       
+    }
 
     void GameOver()
     {
