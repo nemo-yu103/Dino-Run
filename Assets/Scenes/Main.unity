@@ -529,8 +529,9 @@ GameObject:
   - component: {fileID: 312759023}
   - component: {fileID: 312759024}
   - component: {fileID: 312759025}
+  - component: {fileID: 312759026}
   m_Layer: 5
-  m_Name: 4_HP
+  m_Name: 3_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 312759022}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.38893, y: 5.15502, z: 0}
+  m_LocalPosition: {x: -11.38893, y: 5.17502, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -631,6 +632,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &312759026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312759022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  animator: {fileID: 312759025}
 --- !u!1 &380437124
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +656,9 @@ GameObject:
   - component: {fileID: 380437125}
   - component: {fileID: 380437126}
   - component: {fileID: 380437127}
+  - component: {fileID: 380437128}
   m_Layer: 5
-  m_Name: 1_HP
+  m_Name: 0_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,6 +759,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &380437128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380437124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  animator: {fileID: 380437127}
 --- !u!1 &380645877
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,8 +783,9 @@ GameObject:
   - component: {fileID: 380645878}
   - component: {fileID: 380645879}
   - component: {fileID: 380645880}
+  - component: {fileID: 380645881}
   m_Layer: 5
-  m_Name: 3_HP
+  m_Name: 2_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -857,6 +886,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &380645881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380645877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  animator: {fileID: 380645880}
 --- !u!1 &411219559
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +913,7 @@ GameObject:
   - component: {fileID: 411219564}
   - component: {fileID: 411219563}
   - component: {fileID: 411219565}
+  - component: {fileID: 411219566}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -945,7 +988,7 @@ Transform:
   m_GameObject: {fileID: 411219559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.8, y: -2.47, z: 0}
+  m_LocalPosition: {x: -6.75, y: -2.545, z: 0}
   m_LocalScale: {x: 13, y: 13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1007,6 +1050,73 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411219559}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.022755273, y: -0.0015276521}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.17, y: 0.19}
+    newSize: {x: 0.17, y: 0.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.11038755, y: 0.15203172}
+  m_EdgeRadius: 0
+--- !u!114 &411219565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411219559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f997520fa830214e8b92a61b5213957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  jumpForce: 0
+  HP: 0
+  getCoin: 0
+  animator: {fileID: 411219562}
+  hpUI: {fileID: 1275155942}
+  hpUI1: {fileID: 312759026}
+  hpUI2: {fileID: 380645881}
+  hpUI3: {fileID: 1346757423}
+  hpUI4: {fileID: 380437128}
+--- !u!60 &411219566
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411219559}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -1034,7 +1144,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.007446248}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1044,23 +1154,18 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17, y: 0.17510751}
-  m_EdgeRadius: 0
---- !u!114 &411219565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411219559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f997520fa830214e8b92a61b5213957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  jumpForce: 0
-  HP: 0
-  getCoin: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.053535473, y: 0.08666218}
+      - {x: -0.056034096, y: 0.07530467}
+      - {x: -0.06623991, y: 0.074999996}
+      - {x: -0.06415552, y: -0.012805821}
+      - {x: -0.060507666, y: -0.085098825}
+      - {x: 0.022915523, y: -0.08457773}
+      - {x: 0.026382852, y: 0.0033100098}
+      - {x: 0.07509884, y: 0.003041301}
+      - {x: 0.075098805, y: 0.08509883}
+  m_UseDelaunayMesh: 0
 --- !u!1 &417663828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +2075,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1055160504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055160506}
+  - component: {fileID: 1055160505}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1055160505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055160504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179d145c25fde4941bccabd84786fefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  background: {fileID: 1245107546}
+  map: {fileID: 1639802872}
+--- !u!4 &1055160506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055160504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.82143, y: -2.38342, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175216568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,8 +2344,9 @@ GameObject:
   - component: {fileID: 1275155939}
   - component: {fileID: 1275155940}
   - component: {fileID: 1275155941}
+  - component: {fileID: 1275155942}
   m_Layer: 5
-  m_Name: 5_HP
+  m_Name: 4_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2295,6 +2447,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1275155942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275155938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  animator: {fileID: 1275155941}
 --- !u!1 &1319457412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,8 +2561,9 @@ GameObject:
   - component: {fileID: 1346757420}
   - component: {fileID: 1346757421}
   - component: {fileID: 1346757422}
+  - component: {fileID: 1346757423}
   m_Layer: 5
-  m_Name: 2_HP
+  m_Name: 1_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2498,6 +2664,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1346757423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346757419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  animator: {fileID: 1346757422}
 --- !u!1 &1388275561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,3 +3900,4 @@ SceneRoots:
   - {fileID: 106484317}
   - {fileID: 648941982}
   - {fileID: 661400572}
+  - {fileID: 1055160506}

@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsDamage2
+    m_ConditionEvent: IsDamage3
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4413959663133116429}
@@ -59,7 +59,7 @@ AnimatorController:
   m_Name: 4_HP
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: IsDamage2
+  - m_Name: IsDamage3
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

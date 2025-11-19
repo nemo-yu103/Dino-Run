@@ -3,6 +3,7 @@ using UnityEngine;
 public class ItemsController : MonoBehaviour
 {
     float ItemscrollSpeed = 4f;
+    private bool isSurvival = true;
 
     void Start()
     {
@@ -11,14 +12,16 @@ public class ItemsController : MonoBehaviour
 
     void Update()
     {
-        transform.position += Vector3.left * ItemscrollSpeed * Time.deltaTime;
-        if (transform.position.x <= -10)
+        if (isSurvival)
         {
-            Destroy(gameObject);
+            transform.position += Vector3.left * ItemscrollSpeed * Time.deltaTime;
+            if (transform.position.x <= -10)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
-   
-
+    
 
 }

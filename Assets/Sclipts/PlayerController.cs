@@ -1,3 +1,4 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.Scripting;
 
@@ -8,12 +9,21 @@ public class PlayerController : MonoBehaviour
     private bool isGround = true;
     public int getCoin = 0;
     Rigidbody2D rb;
+    public Animator animator;
+
+
+    public UIController hpUI;
+    public UIController hpUI1;
+    public UIController hpUI2;
+    public UIController hpUI3;
+    public UIController hpUI4;
 
     void Start()
     {
         jumpForce = 7f;
         HP = 5;
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
@@ -62,16 +72,34 @@ public class PlayerController : MonoBehaviour
     public void Damage()
     {
         HP -= 1;
-        if(HP == 0)
+        if (HP == 0)
         {
-            GameOver();
+            Die();
         }
-       
+        else
+        {
+            animator.SetBool("isDamage", true);
+        }
+        Invoke(nameof(EndDamgeAnimation), 2f);
+
+        hpUI.UpdateHPUI(HP);
+        hpUI1.UpdateHPUI1(HP);
+        hpUI2.UpdateHPUI2(HP);
+        hpUI3.UpdateHPUI3(HP);
+        hpUI4.UpdateHPUI4(HP);
+
     }
 
-    void GameOver()
+    private void EndDamgeAnimation()
     {
+        animator.SetBool("isDamage", false);
+    }
 
+
+    void Die()
+    {
+        animator.SetTrigger("Die");
+        GameManager.Instance.GameOver();
     }
 
 }
