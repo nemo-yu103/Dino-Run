@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public int HP;
     private bool isGround = true;
-    public int getCoin = 0;
+    //public int getCoin = 0;
     Rigidbody2D rb;
     public Animator animator;
 
@@ -62,9 +62,14 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (collision.gameObject.name == "coin(Clone)")
             {
-                getCoin++;
+                //getCoin++;
+                UI_coingem.Instance.AddCoin();
             }
-            Debug.Log(getCoin);
+            else if (collision.gameObject.name == "gem(Clone)")
+            {
+                UI_coingem.Instance.AddGem();
+            }
+            //Debug.Log(getCoin);
         }
 
     }
@@ -100,6 +105,13 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetTrigger("Die");
         GameManager.Instance.GameOver();
+
+        Invoke("Destroy", 3f);
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 
 }
