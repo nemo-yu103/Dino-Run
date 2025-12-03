@@ -32,6 +32,12 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        if (transform.position.x <= -10)
+        {
+            HP -= 5;
+            Die();
+        }
     }
 
     void Jump()
@@ -112,6 +118,12 @@ public class PlayerController : MonoBehaviour
     private void Destroy()
     {
         Destroy(gameObject);
+        Invoke("GameOverScreen", 1.5f);
+    }
+
+    void GameOverScreen()
+    {
+        
     }
 
 }
