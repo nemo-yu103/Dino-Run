@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     public void Damage()
     {
-        HP -= 1;
+        UIController.Instance.TakeDamage();
         if (HP == 0)
         {
             Die();
@@ -92,13 +92,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isDamage", true);
         }
         Invoke(nameof(EndDamgeAnimation), 2f);
-
-        hpUI.UpdateHPUI(HP);
-        hpUI1.UpdateHPUI1(HP);
-        hpUI2.UpdateHPUI2(HP);
-        hpUI3.UpdateHPUI3(HP);
-        hpUI4.UpdateHPUI4(HP);
-
     }
 
     private void EndDamgeAnimation()
