@@ -2,25 +2,24 @@ using UnityEngine;
 
 public class AnimationChanger : MonoBehaviour
 {
-	public Texture replacetexture;
-
-	private SpriteRenderer spriteRenderer;
-	private static int idMainTex = Shader.PropertyToID("_MainTex");
-	private MaterialPropertyBlock block;
+	Animator anim;
+	[SerializeField] AnimatorOverrideController[] aoc;
+	[SerializeField] int m;
 
 	void Start()
 	{
-		block = new MaterialPropertyBlock();
-		spriteRenderer = GetComponent<SpriteRenderer>();
-		spriteRenderer.GetPropertyBlock(block);
+		anim = GetComponent<Animator>();
+		ChangeColor(m);
 	}
 
 	void Update()
 	{
-		block.SetTexture(idMainTex, replacetexture);
-		spriteRenderer.SetPropertyBlock(block);
+		
 	}
 
+	void ChangeColor(int n) {
+		anim.runtimeAnimatorController = aoc[n];
+	}
 }
 
 	

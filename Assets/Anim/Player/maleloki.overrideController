@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: maleloki
+  m_Controller: {fileID: 9100000, guid: 16c111d5668df93418ab5062d0e88857, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6b6b8148822fdbc4ab87b3e13a50db76, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 042a33a94d014cb4293569427bb971a1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f6b75529e33578c4ba172f3468cab081, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 363da743f880d364389a4044764fe37a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e57c9002a7872c047b33054a4fa8bd03, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7b43b5965da41d34d9ae55edf5ea4bb2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 60fae879fe7b83849a3c657cb6bce6a1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 856519b747c274147b19181a8f94d495, type: 2}
