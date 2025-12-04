@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
 
-    public UIController hpUI;
-    public UIController hpUI1;
-    public UIController hpUI2;
-    public UIController hpUI3;
-    public UIController hpUI4;
+    //public UIController hpUI;
+    //public UIController hpUI1;
+    //public UIController hpUI2;
+    //public UIController hpUI3;
+    //public UIController hpUI4;
 
     void Start()
     {
