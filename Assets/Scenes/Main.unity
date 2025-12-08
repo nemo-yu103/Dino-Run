@@ -857,7 +857,7 @@ Transform:
   m_GameObject: {fileID: 582301818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.68, y: -0.86, z: 0}
+  m_LocalPosition: {x: -1.4, y: 2.79, z: 0}
   m_LocalScale: {x: 16.170969, y: 16.550251, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1095,7 +1095,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8942136668261941897, guid: 85bd38121392017459a9d5d2b1f3188b, type: 3}
   m_PrefabInstance: {fileID: 3160642547542833821}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &995121199
+--- !u!114 &995121201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1104,9 +1104,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 995121197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f29421a482718428f1ff06f5def00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 176ff6bcf90ed704587432907ac8a48e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI_coingem
+  m_EditorClassIdentifier: Assembly-CSharp::UI_Gem
   digit100: {fileID: 257510663}
   digit10: {fileID: 1307796238}
   digit1: {fileID: 1773639785}
@@ -2432,7 +2432,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8942136668261941897, guid: 85bd38121392017459a9d5d2b1f3188b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 995121199}
+      addedObject: {fileID: 995121201}
   m_SourcePrefab: {fileID: 100100000, guid: 85bd38121392017459a9d5d2b1f3188b, type: 3}
 --- !u!1001 &4228781147401855647
 PrefabInstance:
@@ -2523,6 +2523,10 @@ PrefabInstance:
       value: 0.00000040954276
       objectReference: {fileID: 0}
     - target: {fileID: 5855032256758922582, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
+      propertyPath: m_SpriteHash
+      value: 19711462
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855032256758922582, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
       propertyPath: m_CategoryHash
       value: 2.0431926e-29
       objectReference: {fileID: 0}
@@ -2546,6 +2550,10 @@ PrefabInstance:
       propertyPath: HP_4
       value: 
       objectReference: {fileID: 1275155943}
+    - target: {fileID: 8239542973684070365, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1564688358316481467, guid: bc98d5b4102fea046901bee57ed28741, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class UI_HP : MonoBehaviour
 {
-    public static UIController Instance;
+    public static UI_HP Instance;
 
     public SpriteResolver HP_4;
     public SpriteResolver HP_3;
@@ -21,6 +21,7 @@ public class UIController : MonoBehaviour
 
     public void TakeDamage()
     {
+        Debug.Log("OK");
         life--;
         UpdateHP();
     }
@@ -28,6 +29,7 @@ public class UIController : MonoBehaviour
     void UpdateHP()
     {
         int remHP_4 = life % 5;
+        Debug.Log(remHP_4);
         int remHP_3 = life % 4;
         int remHP_2 = life % 3;
         int remHP_1 = life % 2;

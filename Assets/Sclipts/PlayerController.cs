@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Damage();
+            
         }
 
         if (collision.gameObject.CompareTag("Item"))
@@ -68,21 +69,21 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (collision.gameObject.name == "coin(Clone)")
             {
-                //getCoin++;
-                UI_coingem.Instance.AddCoin();
+                UI_Coin.Instance.AddCoin();
             }
             else if (collision.gameObject.name == "gem(Clone)")
             {
-                UI_coingem.Instance.AddGem();
+                UI_Gem.Instance.AddGem();
             }
-            //Debug.Log(getCoin);
         }
 
     }
 
     public void Damage()
     {
-        UIController.Instance.TakeDamage();
+        HP -= 1;
+        
+
         if (HP == 0)
         {
             Die();
@@ -92,6 +93,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isDamage", true);
         }
         Invoke(nameof(EndDamgeAnimation), 2f);
+
+        UI_HP.Instance.TakeDamage();
     }
 
     private void EndDamgeAnimation()
