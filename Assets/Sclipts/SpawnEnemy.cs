@@ -15,11 +15,12 @@ public class SpawnEnemy : MonoBehaviour
 
     private Camera mainCamera;
 
-    public bool gameNow = true;
+    private bool gameNow = false;
 
-    void Start()
+    public void GameStart()
     {
         mainCamera = Camera.main;
+        gameNow = true;
         StartCoroutine(SpawnLoop());
     }
 

@@ -19,12 +19,12 @@ public class SpawnItems : MonoBehaviour
     float horizontalSpacing = 1.5f;
 
     private Camera mainCamera;
+    private bool gameNow = false;
 
-    public bool gameNow = true;
-
-    void Start()
+    public void GameStart()
     {
         mainCamera = Camera.main;
+        gameNow = true;
         StartCoroutine(SpawnLoop());
     }
 
@@ -32,6 +32,7 @@ public class SpawnItems : MonoBehaviour
     {
         while(gameNow == true) 
         {
+            Debug.Log("ok");
                 CoinSpawn();
 
                 float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);

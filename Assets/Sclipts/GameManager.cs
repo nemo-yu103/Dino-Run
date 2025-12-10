@@ -5,10 +5,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
    
-    public ScrollBackground background; // îwåiÉXÉNÉçÅ[Éã
+    public ScrollBackground background;
+    public ScrollBackground background2;
     public ScrollMap map;
     public SpawnItems spawnItems;
     public SpawnEnemy spawnEnemy;
+    public SpawnAnimals spawnAnimal;
     //public ItemsController itemsController;
    
 
@@ -21,9 +23,11 @@ public class GameManager : MonoBehaviour
     {
         // îwåií‚é~
         background.StopScroll();
+        background2.StopScroll();
         map.StopScroll();
         spawnItems.StopSpawn();
         spawnEnemy.StopSpawn(); 
+        spawnAnimal.StopSpawn();
         ItemsController.Instance.StopItems();
 
         // ïKóvÇ»ÇÁéûä‘í‚é~Ç‡Ç≈Ç´ÇÈ

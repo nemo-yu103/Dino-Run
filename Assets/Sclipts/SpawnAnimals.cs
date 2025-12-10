@@ -17,17 +17,13 @@ public class SpawnAnimals : MonoBehaviour
 
     private Camera mainCamera;
 
-    public bool gameNow = true;
+    private bool gameNow = false;
 
-    void Start()
+    public void GameStart()
     {
         mainCamera = Camera.main;
+        gameNow = true;
         StartCoroutine(SpawnLoop());
-    }
-
-    void Update()
-    {
-
     }
 
     IEnumerator SpawnLoop()
