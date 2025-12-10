@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SpawnItems : MonoBehaviour
 {
+    public static SpawnItems Instans;
+
     [Header("スポーン設定")]
     public GameObject coinPrefab;
     public GameObject gemPrefab;
@@ -18,30 +20,30 @@ public class SpawnItems : MonoBehaviour
 
     private Camera mainCamera;
 
+    public bool gameNow = true;
+
     void Start()
     {
         mainCamera = Camera.main;
         StartCoroutine(SpawnLoop());
     }
 
-    void Update()
-    {
-        
-    }
-
     IEnumerator SpawnLoop()
     {
-        while (true)
+        while(gameNow == true) 
         {
-            CoinSpawn();
+                CoinSpawn();
 
-            float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
-            yield return new WaitForSeconds(waitTime);
+                float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
+                yield return new WaitForSeconds(waitTime);
+            
         }
     }
 
     void CoinSpawn()
     {
+        Debug.Log(gameNow);
+
         // カメラ右端のワールド座標を取得
         float camHeight = 2f * mainCamera.orthographicSize;
         float camWidth = camHeight * mainCamera.aspect;
@@ -59,4 +61,12 @@ public class SpawnItems : MonoBehaviour
             Instantiate(coinPrefab, spawnPos, Quaternion.identity);
         }
     }
+
+
+    public void StopSpawn()
+    {
+        gameNow = false;
+    }
+
+
 }

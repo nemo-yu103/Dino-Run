@@ -10,10 +10,12 @@ public class SpawnEnemy : MonoBehaviour
     float maxSpawnInterval = 5f;
 
     [Header("èoåªà íuê›íË")]
-    float spawnYMin = -3f;
+    //float spawnYMin = -3f;
     float spawnOffsetX = 2f;
 
     private Camera mainCamera;
+
+    public bool gameNow = true;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        while (true)
+        while (gameNow==true)
         {
             EnemySpawn();
 
@@ -61,4 +63,10 @@ public class SpawnEnemy : MonoBehaviour
         Instantiate(selectedPrefab, spawnPos, Quaternion.identity);
         
     }
+
+    public void StopSpawn()
+    {
+        gameNow = false;
+    }
+
 }

@@ -1,20 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class UI_HP : MonoBehaviour
 {
     private PlayerController playerController;
-    //[SerializeField]
-    //public Sprite hpImage;
-    //public Sprite[] hpSprites;
     public Animator animator;
-    
-    void Start()
-    {
-        playerController = GetComponent<PlayerController>();
-    }
 
-    public void UpdateHPUI(int HP)
+
+    public void UpdateHPUI4(int HP)
     {
         //HP = Mathf.Clamp(HP, 0, hpSprites.Length - 1);
         //hpImage = hpSprites[HP];
@@ -25,13 +18,13 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void UpdateHPUI1(int HP)
+    public void UpdateHPUI3(int HP)
     {
         if (HP == 3)
         {
             animator.SetBool("IsDamage3", true);
         }
-        
+
     }
 
     public void UpdateHPUI2(int HP)
@@ -40,28 +33,23 @@ public class UIController : MonoBehaviour
         {
             animator.SetBool("IsDamage2", true);
         }
-       
+
     }
 
-    public void UpdateHPUI3(int HP)
+    public void UpdateHPUI1(int HP)
     {
-         if (HP == 1)
+        if (HP == 1)
         {
             animator.SetBool("IsDamage1", true);
         }
-        
+
     }
 
-    public void UpdateHPUI4(int HP)
+    public void UpdateHPUI0(int HP)
     {
         if (HP == 0)
         {
             animator.SetBool("IsDamage0", true);
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

@@ -7,23 +7,24 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public int HP;
     private bool isGround = true;
-    public int getCoin = 0;
+    //public int getCoin = 0;
     Rigidbody2D rb;
     public Animator animator;
 
+    public GameObject hpui;
 
-    public UIController hpUI;
-    public UIController hpUI1;
-    public UIController hpUI2;
-    public UIController hpUI3;
-    public UIController hpUI4;
+
+    public UI_HP hpUI4;
+    public UI_HP hpUI3;
+    public UI_HP hpUI2;
+    public UI_HP hpUI1;
+    public UI_HP hpUI0;
 
     void Start()
     {
         jumpForce = 7f;
         HP = 5;
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     void Update()
@@ -31,6 +32,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             Jump();
+        }
+
+        if (transform.position.x <= -10)
+        {
+            HP -= 5;
+            Die();
         }
     }
 
@@ -62,9 +69,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (collision.gameObject.name == "coin(Clone)")
             {
-                getCoin++;
+                UI_Coin.Instance.AddCoin();
             }
-            Debug.Log(getCoin);
+            else if (collision.gameObject.name == "gem(Clone)")
+            {
+                UI_Gem.Instance.AddGem();
+            }
         }
 
     }
@@ -72,6 +82,8 @@ public class PlayerController : MonoBehaviour
     public void Damage()
     {
         HP -= 1;
+        
+
         if (HP == 0)
         {
             Die();
@@ -80,14 +92,13 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isDamage", true);
         }
-        Invoke(nameof(EndDamgeAnimation), 2f);
+        Invoke(nameof(EndDamgeAnimation), 1.5f);
 
-        hpUI.UpdateHPUI(HP);
-        hpUI1.UpdateHPUI1(HP);
-        hpUI2.UpdateHPUI2(HP);
-        hpUI3.UpdateHPUI3(HP);
         hpUI4.UpdateHPUI4(HP);
-
+        hpUI3.UpdateHPUI3(HP);
+        hpUI2.UpdateHPUI2(HP);
+        hpUI1.UpdateHPUI1(HP);
+        hpUI0.UpdateHPUI0(HP);
     }
 
     private void EndDamgeAnimation()
@@ -100,6 +111,19 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetTrigger("Die");
         GameManager.Instance.GameOver();
+
+        Invoke("Destroy", 3f);
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
+        Invoke("GameOverScreen", 1.5f);
+    }
+
+    void GameOverScreen()
+    {
+        
     }
 
 }
