@@ -39,7 +39,8 @@ public class UI_Count : MonoBehaviour
             countTime = -1;
             Invoke("GameStart", 0.5f);
         }
-          
+         
+        
     }
 
     void GameStart()
