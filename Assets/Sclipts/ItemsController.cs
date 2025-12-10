@@ -2,8 +2,15 @@ using UnityEngine;
 
 public class ItemsController : MonoBehaviour
 {
+    public static ItemsController Instance;
+
     float ItemscrollSpeed = 4f;
     private bool isSurvival = true;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -25,6 +32,7 @@ public class ItemsController : MonoBehaviour
     public void StopItems()
     {
         isSurvival = false;
+        Destroy(gameObject);
     }
 
 }
