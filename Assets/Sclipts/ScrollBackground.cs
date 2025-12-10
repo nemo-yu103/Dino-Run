@@ -10,9 +10,7 @@ public class ScrollBackground : MonoBehaviour
 
     void Start()
     {
-        scrollSpeed = 1f;
-        resetPositionX = -41f;
-        startPositionX = 0.02f;
+        
     }
 
     void Update()
