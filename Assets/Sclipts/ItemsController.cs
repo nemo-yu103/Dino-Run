@@ -22,6 +22,9 @@ public class ItemsController : MonoBehaviour
         }
     }
 
-    
+    public void StopItems()
+    {
+        isSurvival = false;
+    }
 
 }
