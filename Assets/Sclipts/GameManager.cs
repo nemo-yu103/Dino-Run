@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public ScrollMap map;
     public SpawnItems spawnItems;
     public SpawnEnemy spawnEnemy;
-    public ItemsController itemsController;
+    //public ItemsController itemsController;
    
 
     void Awake()
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         map.StopScroll();
         spawnItems.StopSpawn();
         spawnEnemy.StopSpawn(); 
-        itemsController.StopItems();
+        ItemsController.Instance.StopItems();
 
         // •K—v‚È‚çŽžŠÔ’âŽ~‚à‚Å‚«‚é
         //Time.timeScale = 0f;

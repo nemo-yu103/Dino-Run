@@ -172,7 +172,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2644518445972849073, guid: 98e313db4a543e1488cd0541242b2ad5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -264,3 +264,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da355d672af7cbd4f8e2d23af8b42682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  ItemscrollSpeed: 4

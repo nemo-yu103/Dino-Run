@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    float ItemscrollSpeed = 4f;
+    [SerializeField] float ItemscrollSpeed = 4f;
     private bool isSurvival = true;
 
     void Start()
@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour
     public void EnemyStop()
     {
         isSurvival = false;
+        Destroy(gameObject);
     }
 
 }
