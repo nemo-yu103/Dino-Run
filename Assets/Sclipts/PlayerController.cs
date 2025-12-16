@@ -29,14 +29,25 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.x <= -6)
+        {
+            transform.Translate(0.001f, 0, 0);
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             Jump();
         }
 
+        //‰æ–ÊŠO‚Éo‚½‚çŽ€–S
         if (transform.position.x <= -10)
         {
-            HP -= 5;
+            while (HP == 0)
+            {
+                HP -= 1;
+            }
+            
             Die();
         }
     }

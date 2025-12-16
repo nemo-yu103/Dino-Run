@@ -25,10 +25,13 @@ public class BrockGenerator : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        BrockSpawn();
-
-        float waitTime = Random.Range(2f, 5f);
-        yield return new WaitForSeconds(waitTime);
+        while(gameNow == true)
+        {
+            BrockSpawn();
+            float waitTime = Random.Range(2f, 5f);
+            yield return new WaitForSeconds(waitTime);
+        }
+       
     }
 
     void BrockSpawn()
