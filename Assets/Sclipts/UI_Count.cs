@@ -13,6 +13,7 @@ public class UI_Count : MonoBehaviour
     public SpawnAnimals animal;
     public SpawnEnemy enemy;
     public SpawnItems items;
+    public BrockGenerator brock;
 
     void Start()
     {
@@ -49,5 +50,6 @@ public class UI_Count : MonoBehaviour
         animal.GameStart();
         enemy.GameStart();
         items.GameStart();
+        brock.GameStart();
     }
 }

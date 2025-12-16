@@ -11,8 +11,9 @@ public class GameManager : MonoBehaviour
     public SpawnItems spawnItems;
     public SpawnEnemy spawnEnemy;
     public SpawnAnimals spawnAnimal;
+    public BrockGenerator brockGenerator;
     //public ItemsController itemsController;
-   
+
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         spawnEnemy.StopSpawn(); 
         spawnAnimal.StopSpawn();
         ItemsController.Instance.StopItems();
+        brockGenerator.StopSpawn();
 
         // •K—v‚È‚çŽžŠÔ’âŽ~‚à‚Å‚«‚é
         //Time.timeScale = 0f;
