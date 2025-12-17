@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class ScrollMap : MonoBehaviour
 {
+    public static ScrollMap Instance;
+
+
     public float scrollSpeed;
     public float resetPositionX;
     public float startPositionX;
 
-    private bool isScrolling = true;
+    public bool isScrolling = true;
 
     void Start()
     {
@@ -29,6 +32,12 @@ public class ScrollMap : MonoBehaviour
     public void StopScroll()
     {
         isScrolling = false;
+    }
+
+    public void GetFluits()
+    {
+        Debug.Log("ok");
+        scrollSpeed += 1f;
     }
 
 }

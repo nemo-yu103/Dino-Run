@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public SpawnEnemy spawnEnemy;
     public SpawnAnimals spawnAnimal;
     public BrockGenerator brockGenerator;
+    public BrockController brockController;
+    public FluitsController fluitsController;
+    public EnemyController enemyController;
     //public ItemsController itemsController;
 
 
@@ -19,6 +22,17 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    public void PlayGame()
+    {
+        map.GetFluits();
+        brockController.GetFluits();
+        fluitsController.GetFluits();
+        enemyController.GetFluits();
+        ItemsController.Instance.GetFluits();
+    }
+
+
 
     public void GameOver()
     {

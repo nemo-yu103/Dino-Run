@@ -29,4 +29,9 @@ public class ScrollBackground : MonoBehaviour
         isScrolling = false;
     }
 
+    public void GetFluits()
+    {
+        scrollSpeed += 1f;
+    }
+
 }

@@ -35,4 +35,9 @@ public class ItemsController : MonoBehaviour
         
     }
 
+    public void GetFluits()
+    {
+        ItemscrollSpeed += 1f;
+    }
+
 }

@@ -94,6 +94,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.CompareTag("Fluits"))
+        {
+            Destroy(collision.gameObject);
+            GameManager.Instance.PlayGame();
+        }
+
     }
 
     public void Damage()

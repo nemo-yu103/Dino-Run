@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da355d672af7cbd4f8e2d23af8b42682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  ItemscrollSpeed: 4
 --- !u!95 &6123460186757741387
 Animator:
   serializedVersion: 7
