@@ -4,12 +4,12 @@ public class EnemyController : MonoBehaviour
 {
     public static EnemyController Instance;
 
-    [SerializeField] float ItemscrollSpeed = 4f;
+    float ItemscrollSpeed;
     private bool isSurvival = true;
 
     void Start()
     {
-
+        ItemscrollSpeed = 4f;
     }
 
     void Update()
