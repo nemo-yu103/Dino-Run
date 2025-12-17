@@ -28,7 +28,7 @@ public class BrockGenerator : MonoBehaviour
         while(gameNow == true)
         {
             BrockSpawn();
-            float waitTime = Random.Range(2f, 5f);
+            float waitTime = Random.Range(1f, 3f);
             yield return new WaitForSeconds(waitTime);
         }
        
@@ -36,24 +36,30 @@ public class BrockGenerator : MonoBehaviour
 
     void BrockSpawn()
     {
+        GameObject selectPrefab;
+
+        int brockType = Random.Range(0, 2);
+        if (brockType == 0)
+        {
+            selectPrefab = brockPrefab1;
+        }
+        else
+        {
+            selectPrefab = brockPrefab2;
+        }
+
         float camHeight = 2f * mainCamera.orthographicSize;
         float camWidth = camHeight * mainCamera.aspect;
         float rightEdge = mainCamera.transform.position.x + camWidth / 2f;
         float randomY = Random.Range(spawnYMin, spawnYMax);
-        for (int i = 0; i < 3; i++)
-        {
-            float xPos = rightEdge + spawnOffsetX + (i * horizontalSpacing);
-            Vector3 spawnPos = new Vector3(xPos + spawnOffsetX, randomY, 0f);
-            int brockType = Random.Range(0, 2);
-            if (brockType == 0)
-            {
-                Instantiate(brockPrefab1, spawnPos, Quaternion.identity);
-            }
-            else
-            {
-                Instantiate(brockPrefab2, spawnPos, Quaternion.identity);
-            }
-        }
+    
+
+        float xPos = rightEdge + spawnOffsetX + (2 * horizontalSpacing);
+        Vector3 spawnPos = new Vector3(xPos + spawnOffsetX, randomY, 0f);
+            
+        Instantiate(selectPrefab, spawnPos, Quaternion.identity);
+            
+        
     }
 
     public void StopSpawn()

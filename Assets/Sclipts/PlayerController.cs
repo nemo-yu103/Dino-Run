@@ -4,11 +4,17 @@ using UnityEngine.Scripting;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
+    [Header("ステータス")]
     public float jumpForce;
     public int HP;
+
     private bool isGround = true;
-    //public int getCoin = 0;
+    public bool isSurvival = true;
+
     Rigidbody2D rb;
+
     public Animator animator;
 
     public GameObject hpui;
@@ -29,9 +35,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x <= -6)
+        if (transform.position.x <= -6 && isSurvival)
         {
-            transform.Translate(0.001f, 0, 0);
+            transform.Translate(0.003f, 0, 0);
         }
 
 
@@ -120,6 +126,8 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
+        isSurvival = false;
+        
         animator.SetTrigger("Die");
         GameManager.Instance.GameOver();
 

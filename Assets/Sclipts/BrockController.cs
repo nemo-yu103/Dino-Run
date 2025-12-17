@@ -5,7 +5,6 @@ public class BrockController : MonoBehaviour
     public float scrollSpeed;
 
     private bool isScrolling = true;
-
     void Start()
     {
         scrollSpeed = 4f;

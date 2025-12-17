@@ -19,7 +19,7 @@ public class SpawnItems : MonoBehaviour
     float horizontalSpacing = 1.5f;
 
     private Camera mainCamera;
-    private bool gameNow = false;
+    public bool gameNow = false;
 
     public void GameStart()
     {

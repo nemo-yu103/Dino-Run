@@ -9,7 +9,7 @@ public class UI_Coin : MonoBehaviour
     public SpriteResolver digit10;
     public SpriteResolver digit1;
 
-    private int score = 0;
+    public int score = 0;
 
     private void Awake()
     {
