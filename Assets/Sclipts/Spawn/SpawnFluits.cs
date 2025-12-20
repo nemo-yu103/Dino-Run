@@ -9,8 +9,8 @@ public class SpawnFluits : MonoBehaviour
     public GameObject applePrefab;
     public GameObject bananaPrefab;
     
-    float minSpawnInterval = 10f;
-    float maxSpawnInterval = 20f;
+    float minSpawnInterval = 1f;
+    float maxSpawnInterval = 15f;
 
     [Header("èoåªà íuê›íË")]
     float spawnYMin = -3f;
@@ -33,7 +33,15 @@ public class SpawnFluits : MonoBehaviour
         while (gameNow == true)
         {
             Debug.Log("ok");
-            AppleSpawn();
+            int selectFruit = Random.Range(0, 2);
+            if(selectFruit == 0)
+            {
+                AppleSpawn();
+            }
+            else
+            {
+                BananaSpawn();
+            }
 
             float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
             yield return new WaitForSeconds(waitTime);
@@ -60,7 +68,16 @@ public class SpawnFluits : MonoBehaviour
 
     void BananaSpawn()
     {
+        float camHeight = 2f * mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+        float rightEdge = mainCamera.transform.position.x + camWidth / 2f;
 
+        float randomY = Random.Range(spawnYMin, spawnYMax);
+
+        float xPos = rightEdge + spawnOffsetX;
+        Vector3 spawnPos = new Vector3(xPos + spawnOffsetX, randomY, 0f);
+
+        Instantiate(bananaPrefab, spawnPos, Quaternion.identity);
     }
 
 

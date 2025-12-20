@@ -96,8 +96,17 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Fluits"))
         {
-            Destroy(collision.gameObject);
-            GameManager.Instance.PlayGame();
+            if(collision.gameObject.name == "apple(Clone)")
+            {
+                Destroy(collision.gameObject);
+                GameManager.Instance.PlayGame();
+            }
+            else if (collision.gameObject.name == "banana(Clone)")
+            {
+                Destroy(collision.gameObject);
+                jumpForce += 1f;
+            }
+           
         }
 
     }
