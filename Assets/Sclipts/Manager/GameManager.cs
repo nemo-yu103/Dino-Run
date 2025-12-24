@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        map.GetFluits();
+        //map.GetFluits();
         brockController.GetFluits();
         fluitsController.GetFluits();
         enemyController.GetFluits();

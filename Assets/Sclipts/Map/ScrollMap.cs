@@ -34,10 +34,10 @@ public class ScrollMap : MonoBehaviour
         isScrolling = false;
     }
 
-    public void GetFluits()
+    /*public void GetFluits()
     {
         Debug.Log("ok");
         scrollSpeed += 1f;
-    }
+    }*/
 
 }
