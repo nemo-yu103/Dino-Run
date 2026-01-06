@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
     public UI_Gem gem;
     public SpawnItems judge;
     public PlayerController playerController;
-
+    public int gameScore = 0;
     
     void Start()
     {
@@ -22,21 +22,22 @@ public class ScoreManager : MonoBehaviour
             timeScore += Time.deltaTime;
             Debug.Log(timeScore);
         }
-
-        if(playerController.isSurvival == false)
+        if(playerController.isSurvival==true)
         {
-            Debug.Log("ok");
             ScoreCal();
         }
+        else
+        {
+
+        }
+       
     }
 
     void ScoreCal()
     {
         int coinScore = UI_Coin.Instance.score * 100;
         int gemScore = UI_Gem.Instance.score * 1000;
-        int gameScore = Mathf.RoundToInt(timeScore) * 100 + coinScore + gemScore;
-
-        Debug.Log(gameScore);
+        gameScore = Mathf.RoundToInt(timeScore) * 100 + coinScore + gemScore;
     }
 
 }
