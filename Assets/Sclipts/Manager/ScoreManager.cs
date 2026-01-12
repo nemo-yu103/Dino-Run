@@ -37,7 +37,7 @@ public class ScoreManager : MonoBehaviour
     {
         int coinScore = UI_Coin.Instance.score * 100;
         int gemScore = UI_Gem.Instance.score * 1000;
-        gameScore = Mathf.RoundToInt(timeScore) * 100 + coinScore + gemScore;
+        gameScore = Mathf.RoundToInt(timeScore) + coinScore + gemScore;
     }
 
 }
