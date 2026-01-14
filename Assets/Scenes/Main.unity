@@ -5322,6 +5322,7 @@ MonoBehaviour:
   ui_gem: {fileID: 995121197}
   ui_hp: {fileID: 138343552}
   ui_score: {fileID: 417317997}
+  ui_gamescore: {fileID: 432977664}
 --- !u!4 &1806599175
 Transform:
   m_ObjectHideFlags: 0
