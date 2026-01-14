@@ -17,8 +17,22 @@ public class ButtonFunction : MonoBehaviour
     }
 
     public void ButtonStart() {
-	Debug.Log("sgw");
+
         ui.StartCountDown();
 
+        Destroy(this.gameObject.transform.parent.parent.gameObject);
+
+	return;
+    }
+
+    public void ButtonExit() {
+
+        # if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        # else
+            Application.Quit();
+        #endif
+
+        return;
     }
 }

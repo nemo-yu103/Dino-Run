@@ -44,12 +44,9 @@ public class UI_Count : MonoBehaviour
 
         if (countTime >= 0)
         {
-            
-
             CT.SetCategoryAndLabel("CountNumber", label.ToString());
 
             countTime = countTime - Time.deltaTime;
-            Debug.Log(countTime);
         }
         
         if (label == 0)
