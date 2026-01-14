@@ -1,6 +1,5 @@
-using UnityEditor.Build.Content;
 using UnityEngine;
-using UnityEngine.Scripting;
+
 
 public class PlayerController : MonoBehaviour
 {

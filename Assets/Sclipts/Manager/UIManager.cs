@@ -19,16 +19,24 @@ public class UIManager : MonoBehaviour
         if (playerController.isSurvival == false)
         { 
             HideUI();
+            Invoke("GameScoreDisplay", 5f);
         }
     }
 
-    void HideUI()
+    public void HideUI()
     {
         ui_coin.SetActive(false);
         ui_gem.SetActive(false);
         ui_hp.SetActive(false);
         ui_score.SetActive(false);
-        Invoke("GameScoreDisplay", 5f);
+    }
+
+    public void DisplayUI()
+    {
+        ui_coin.SetActive(true);
+        ui_gem.SetActive(true);
+        ui_hp.SetActive(true);
+        ui_score.SetActive(true);
     }
 
     void GameScoreDisplay()

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public BrockGenerator brockGenerator;
     public BrockController brockController;
     public FluitsController fluitsController;
+    public SpawnFluits spawnfluits;
     public EnemyController enemyController;
     //public ItemsController itemsController;
 
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         spawnEnemy.StopSpawn(); 
         spawnAnimal.StopSpawn();
         ItemsController.Instance.StopItems();
+        spawnfluits.StopSpawn();
         brockGenerator.StopSpawn();
 
         // •K—v‚È‚çŽžŠÔ’âŽ~‚à‚Å‚«‚é

@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class ButtonFunction : MonoBehaviour
 {
     [SerializeField] UI_Count ui;
+    [SerializeField] UIManager uiManager;
+    [SerializeField] GameObject titleui;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,8 +22,8 @@ public class ButtonFunction : MonoBehaviour
     public void ButtonStart() {
 
         ui.StartCountDown();
-
-        Destroy(this.gameObject.transform.parent.parent.gameObject);
+        uiManager.DisplayUI();
+        titleui.SetActive(true);
 
 	return;
     }
