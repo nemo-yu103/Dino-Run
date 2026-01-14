@@ -23,7 +23,7 @@ public class ButtonFunction : MonoBehaviour
 
         ui.StartCountDown();
         uiManager.DisplayUI();
-        titleui.SetActive(true);
+        Destroy(this.gameObject.transform.parent.parent.gameObject);
 
 	return;
     }

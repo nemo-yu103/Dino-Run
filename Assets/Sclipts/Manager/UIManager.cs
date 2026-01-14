@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class UIManager : MonoBehaviour
         if (playerController.isSurvival == false)
         { 
             HideUI();
-            Invoke("GameScoreDisplay", 5f);
+            Invoke("GameScoreDisplay", 4f);
         }
     }
 
@@ -42,5 +43,11 @@ public class UIManager : MonoBehaviour
     void GameScoreDisplay()
     {
         ui_gamescore.SetActive(true);
+        Invoke("LoadScenes", 4f);
+    }
+
+    void LoadScenes()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

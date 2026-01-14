@@ -3934,7 +3934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFunction
   ui: {fileID: 282810426}
-  uiManager: {fileID: 0}
+  uiManager: {fileID: 1806599174}
+  titleui: {fileID: 506063793}
 --- !u!114 &967356135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4375,6 +4376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFunction
   ui: {fileID: 282810426}
   uiManager: {fileID: 1806599174}
+  titleui: {fileID: 506063793}
 --- !u!114 &1113986783
 MonoBehaviour:
   m_ObjectHideFlags: 0
