@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject ui_gem;
     [SerializeField] GameObject ui_hp;
     [SerializeField] GameObject ui_score;
-
+    [SerializeField] GameObject ui_gamescore;
 
     void Start()
     {
@@ -28,5 +28,11 @@ public class UIManager : MonoBehaviour
         ui_gem.SetActive(false);
         ui_hp.SetActive(false);
         ui_score.SetActive(false);
+        Invoke("GameScoreDisplay", 5f);
+    }
+
+    void GameScoreDisplay()
+    {
+        ui_gamescore.SetActive(true);
     }
 }
