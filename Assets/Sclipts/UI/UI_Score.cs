@@ -24,12 +24,13 @@ public class UI_Score : MonoBehaviour
 
         if(playerController.isSurvival == true)
         {
-            UpdateDigits();
+            UpdateDigits_timeScore();
+            UpdateDigits_coinScore();
         }
 
     }
 
-    void UpdateDigits()
+    void UpdateDigits_timeScore()
     {
         int one = Mathf.RoundToInt(scoreManager.timeScore) % 10;
         int ten = Mathf.RoundToInt(scoreManager.timeScore) / 10;
@@ -50,5 +51,25 @@ public class UI_Score : MonoBehaviour
         sr1000000.SetCategoryAndLabel("1000000", million.ToString());
         sr10000000.SetCategoryAndLabel("10000000", ten_million.ToString());
         sr100000000.SetCategoryAndLabel("100000000", one_hundred_million.ToString());
+    }
+
+    void UpdateDigits_coinScore()
+    {
+        int hundred = scoreManager.coinScore / 100 %10;
+        int thousand = scoreManager.coinScore / 1000 % 10;
+        int ten_thousand = scoreManager.coinScore / 10000 % 10;
+        int one_hundred_thousand = scoreManager.coinScore / 100000 % 10;
+        int million = scoreManager.coinScore / 1000000 % 10;
+        int ten_million = scoreManager.coinScore / 10000000 % 10;
+        int one_hundred_million = scoreManager.coinScore / 100000000 % 10;
+
+        sr100.SetCategoryAndLabel("100", hundred.ToString());
+        sr1000.SetCategoryAndLabel("1000", thousand.ToString());
+        sr10000.SetCategoryAndLabel("10000", ten_thousand.ToString());
+        sr100000.SetCategoryAndLabel("100000", one_hundred_thousand.ToString());
+        sr1000000.SetCategoryAndLabel("1000000", million.ToString());
+        sr10000000.SetCategoryAndLabel("10000000", ten_million.ToString());
+        sr100000000.SetCategoryAndLabel("100000000", one_hundred_million.ToString());
+
     }
 }
