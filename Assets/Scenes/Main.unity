@@ -1666,15 +1666,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI_Score
   scoreManager: {fileID: 548563166}
   playerController: {fileID: 1827918940}
-  sr1: {fileID: 1466417072}
-  sr10: {fileID: 1513957076}
-  sr100: {fileID: 469272595}
-  sr1000: {fileID: 2112015281}
-  sr10000: {fileID: 387092852}
-  sr100000: {fileID: 615132918}
-  sr1000000: {fileID: 2068677234}
-  sr10000000: {fileID: 278499591}
-  sr100000000: {fileID: 327359335}
+  sr:
+  - {fileID: 1466417072}
+  - {fileID: 1513957076}
+  - {fileID: 469272595}
+  - {fileID: 2112015281}
+  - {fileID: 387092852}
+  - {fileID: 615132918}
+  - {fileID: 2068677234}
+  - {fileID: 278499591}
+  - {fileID: 327359335}
 --- !u!1 &417663828
 GameObject:
   m_ObjectHideFlags: 0
@@ -6915,7 +6916,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 9fa577b97eba4f849af8ee294abda866, type: 2}
   - {fileID: 22100000, guid: 9bc73d0323cc943439d53cfd8913ac93, type: 2}
   - {fileID: 22100000, guid: 58d35de92abbfb342b0902c1d84a33b3, type: 2}
-  m: 17
+  m: 0
 --- !u!114 &1827918940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
