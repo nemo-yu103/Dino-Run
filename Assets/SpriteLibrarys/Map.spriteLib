@@ -55,6 +55,22 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -2714503263433814027, guid: 08684eac6d7c015429caa95d06eb86fc, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: Sky
+    m_Hash: 1047212559
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 0
+      m_Hash: 886824737
+      m_Sprite: {fileID: 4957697469188620273, guid: a684d6f901ef594478dc36fae85ad39b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4957697469188620273, guid: a684d6f901ef594478dc36fae85ad39b, type: 3}
+    - m_Name: 1
+      m_Hash: 64810935
+      m_Sprite: {fileID: 3438362232650974482, guid: 3441dc7e0fff14f4d810e58383c0530f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3438362232650974482, guid: 3441dc7e0fff14f4d810e58383c0530f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639044205895726206
+  m_ModificationHash: 639044215279223114
   m_Version: 1
