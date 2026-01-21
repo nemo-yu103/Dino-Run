@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3516308194890372504, guid: ed3feb2b1d69851498f36bea5da092e0, type: 3}
+  m_Sprite: {fileID: 9010720434780433409, guid: 4f56198a26bf51143b510e9e49678698, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.18}
+    oldSize: {x: 0.18, y: 0.17}
     newSize: {x: 0.18, y: 0.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf617c42401c01845a8263dc0592202a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrockController
-  scrollSpeed: 11
+  scrollSpeed: 14
 --- !u!114 &694886869826636379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,4 +182,4 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 643247662
+  m_SpriteHash: 140070658
