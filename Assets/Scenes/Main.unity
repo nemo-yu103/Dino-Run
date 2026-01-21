@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35815c0ebd65947b686af69114353e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnItems
+  scoreManager: {fileID: 548563166}
   coinPrefab: {fileID: 2312900121250218218, guid: 17299e7f81473f1458df151cee17ba98, type: 3}
   gemPrefab: {fileID: 8976634343606009520, guid: 4686f9a8d36cf5847933bac2c1826bf1, type: 3}
   gameNow: 0
@@ -2347,7 +2348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.41, y: -63.74}
+  m_AnchoredPosition: {x: 64.41, y: -63.75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506063795
@@ -6923,6 +6924,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1728833577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728833579}
+  - component: {fileID: 1728833578}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1728833578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728833577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2760b795cf6b0374c973ec14c9bdd86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+  button: {fileID: 1113986783}
+--- !u!4 &1728833579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728833577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4098, y: -0.34387, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1743430331
 GameObject:
   m_ObjectHideFlags: 0
@@ -8238,6 +8284,34 @@ PrefabInstance:
       propertyPath: hpUI4
       value: 
       objectReference: {fileID: 1307386313}
+    - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 5053891880514513698, guid: 2746274a849c31a4aa1818baa6f3617e, type: 3}
+    - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: coinEffectPrefab
+      value: 
+      objectReference: {fileID: 4658201600633941698, guid: 409a6a9975e228b4f98b7701b373e5d3, type: 3}
+    - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: jumpEffectPrefab
+      value: 
+      objectReference: {fileID: 2227399877393155568, guid: 49c07f1003dc49547a381003b1aa089d, type: 3}
+    - target: {fileID: 4540794789514091300, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540794789514091300, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540794789514091300, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540794789514091300, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0019
+      objectReference: {fileID: 0}
     - target: {fileID: 5211523823858437083, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: m_SpriteLibraryAsset
       value: 
@@ -8874,3 +8948,4 @@ SceneRoots:
   - {fileID: 209407595}
   - {fileID: 1716456797}
   - {fileID: 436618996}
+  - {fileID: 1728833579}
