@@ -373,6 +373,8 @@ GameObject:
   m_Component:
   - component: {fileID: 84564443}
   - component: {fileID: 84564444}
+  - component: {fileID: 84564445}
+  - component: {fileID: 84564446}
   m_Layer: 0
   m_Name: desert_a_0
   m_TagString: Untagged
@@ -453,6 +455,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &84564445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84564442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
+--- !u!114 &84564446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84564442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0.22968315
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 359403756
 --- !u!1 &86784671
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +496,8 @@ GameObject:
   - component: {fileID: 86784672}
   - component: {fileID: 86784673}
   - component: {fileID: 86784674}
+  - component: {fileID: 86784676}
+  - component: {fileID: 86784675}
   m_Layer: 0
   m_Name: tileset_forest_2 (1)
   m_TagString: Ground
@@ -590,6 +624,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.1480088}
   m_EdgeRadius: 0
+--- !u!114 &86784675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86784671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.7916854e-19
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 985699668
+--- !u!114 &86784676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86784671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &106484316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3039187937134737739, guid: 5881a1e39fb074644a56bf2a888646f2, type: 3}
@@ -616,6 +680,66 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3875505663089436938, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &209407593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 209407595}
+  - component: {fileID: 209407594}
+  m_Layer: 0
+  m_Name: SkinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &209407594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209407593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e8e30d8012cd742934c8849c7d2fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeMapSkin
+  scoreManager: {fileID: 548563166}
+  sr:
+  - {fileID: 1607774052}
+  - {fileID: 1592828330}
+  - {fileID: 1417211404}
+  - {fileID: 1388275565}
+  - {fileID: 86784675}
+  - {fileID: 1782323750}
+  - {fileID: 277537650}
+  - {fileID: 834991914}
+  - {fileID: 1544088635}
+  - {fileID: 417663832}
+  - {fileID: 84564446}
+  - {fileID: 581201963}
+  - {fileID: 372897234859637710, guid: ee1ccfd33987eb440ac9911a303629f3, type: 3}
+  - {fileID: 2591631017881202672, guid: 2f95a0c2610fe2f42bef8e0d85abedf4, type: 3}
+--- !u!4 &209407595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209407593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.58361, y: -1.09471, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247166798
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +851,8 @@ GameObject:
   m_Component:
   - component: {fileID: 277537647}
   - component: {fileID: 277537648}
+  - component: {fileID: 277537649}
+  - component: {fileID: 277537650}
   m_Layer: 0
   m_Name: trees_0
   m_TagString: Untagged
@@ -796,7 +922,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: -2714503263433814027, guid: 08684eac6d7c015429caa95d06eb86fc, type: 3}
+  m_Sprite: {fileID: -1673732733077124514, guid: 5d16ebbbd08cd3f4a83e4e0d737bb72c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -807,6 +933,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &277537649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277537646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
+--- !u!114 &277537650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277537646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0.0000029426074
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 772708611
 --- !u!1 &278499589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1842,8 @@ GameObject:
   m_Component:
   - component: {fileID: 417663829}
   - component: {fileID: 417663830}
+  - component: {fileID: 417663831}
+  - component: {fileID: 417663832}
   m_Layer: 0
   m_Name: desert_a_0 (1)
   m_TagString: Untagged
@@ -1766,6 +1924,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &417663831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417663828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
+--- !u!114 &417663832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417663828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0.22968315
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 359403756
 --- !u!1 &432977664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,7 +2347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -60}
+  m_AnchoredPosition: {x: 64.41, y: -63.74}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506063795
@@ -2652,6 +2840,8 @@ GameObject:
   m_Component:
   - component: {fileID: 581201961}
   - component: {fileID: 581201962}
+  - component: {fileID: 581201964}
+  - component: {fileID: 581201963}
   m_Layer: 0
   m_Name: desert_a_0
   m_TagString: Untagged
@@ -2732,6 +2922,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &581201963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581201960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0.22968315
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 359403756
+--- !u!114 &581201964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581201960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &615132916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,6 +3661,8 @@ GameObject:
   m_Component:
   - component: {fileID: 834991911}
   - component: {fileID: 834991912}
+  - component: {fileID: 834991913}
+  - component: {fileID: 834991914}
   m_Layer: 0
   m_Name: trees_0 (1)
   m_TagString: Untagged
@@ -3521,6 +3743,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &834991913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834991910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
+--- !u!114 &834991914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834991910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0.0000029426074
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 772708611
 --- !u!1 &914889367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4939,6 +5191,8 @@ GameObject:
   - component: {fileID: 1388275562}
   - component: {fileID: 1388275563}
   - component: {fileID: 1388275564}
+  - component: {fileID: 1388275566}
+  - component: {fileID: 1388275565}
   m_Layer: 0
   m_Name: tileset_forest_2
   m_TagString: Ground
@@ -5065,6 +5319,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.1493024}
   m_EdgeRadius: 0
+--- !u!114 &1388275565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388275561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.7916854e-19
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 985699668
+--- !u!114 &1388275566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388275561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &1411586188 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 84364667944846696, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
@@ -5099,6 +5383,8 @@ GameObject:
   - component: {fileID: 1417211401}
   - component: {fileID: 1417211402}
   - component: {fileID: 1417211403}
+  - component: {fileID: 1417211405}
+  - component: {fileID: 1417211404}
   m_Layer: 0
   m_Name: tileset_forest_2 (2)
   m_TagString: Ground
@@ -5225,6 +5511,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.14781824}
   m_EdgeRadius: 0
+--- !u!114 &1417211404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417211400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.7916854e-19
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 985699668
+--- !u!114 &1417211405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417211400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &1443146100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5813,6 +6129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1544088632}
   - component: {fileID: 1544088633}
+  - component: {fileID: 1544088634}
+  - component: {fileID: 1544088635}
   m_Layer: 0
   m_Name: trees_0
   m_TagString: Untagged
@@ -5893,6 +6211,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1544088634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544088631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
+--- !u!114 &1544088635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544088631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0.0000029426074
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 772708611
 --- !u!1 &1578711867
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,6 +6327,8 @@ GameObject:
   - component: {fileID: 1592828327}
   - component: {fileID: 1592828328}
   - component: {fileID: 1592828329}
+  - component: {fileID: 1592828331}
+  - component: {fileID: 1592828330}
   m_Layer: 0
   m_Name: tileset_forest_2 (1)
   m_TagString: Ground
@@ -6105,6 +6455,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.1493024}
   m_EdgeRadius: 0
+--- !u!114 &1592828330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592828326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.7916854e-19
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 985699668
+--- !u!114 &1592828331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592828326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &1604791637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5823019711863712179, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
@@ -6139,6 +6519,8 @@ GameObject:
   - component: {fileID: 1607774049}
   - component: {fileID: 1607774050}
   - component: {fileID: 1607774051}
+  - component: {fileID: 1607774053}
+  - component: {fileID: 1607774052}
   m_Layer: 0
   m_Name: tileset_forest_2
   m_TagString: Ground
@@ -6265,6 +6647,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.14800873}
   m_EdgeRadius: 0
+--- !u!114 &1607774052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607774048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.7916854e-19
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 985699668
+--- !u!114 &1607774053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607774048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &1611193958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6698,6 +7110,8 @@ GameObject:
   - component: {fileID: 1782323747}
   - component: {fileID: 1782323748}
   - component: {fileID: 1782323749}
+  - component: {fileID: 1782323751}
+  - component: {fileID: 1782323750}
   m_Layer: 0
   m_Name: tileset_forest_2 (2)
   m_TagString: Ground
@@ -6824,6 +7238,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.14671515}
   m_EdgeRadius: 0
+--- !u!114 &1782323750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782323746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.7916854e-19
+  m_labelHash: 0.00000040954276
+  m_SpriteKey: 0
+  m_SpriteHash: 985699668
+--- !u!114 &1782323751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782323746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bdb7e4038312bf84d92c1a73123c1e57, type: 3}
 --- !u!1 &1806599173
 GameObject:
   m_ObjectHideFlags: 0
@@ -6916,7 +7360,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 9fa577b97eba4f849af8ee294abda866, type: 2}
   - {fileID: 22100000, guid: 9bc73d0323cc943439d53cfd8913ac93, type: 2}
   - {fileID: 22100000, guid: 58d35de92abbfb342b0902c1d84a33b3, type: 2}
-  m: 0
+  m: 14
 --- !u!114 &1827918940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
@@ -6928,6 +7372,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f997520fa830214e8b92a61b5213957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!60 &1827918948
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827918935}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.15}
+    newSize: {x: 0.17, y: 0.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.050299257, y: 0.065204956}
+      - {x: -0.050662015, y: -0.0036431588}
+      - {x: -0.050355457, y: -0.06529739}
+      - {x: -0.009889735, y: -0.065523535}
+      - {x: 0.019449648, y: 0.014158081}
+      - {x: 0.08967947, y: 0.0142608825}
+      - {x: 0.09084487, y: 0.06537496}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1834705309
 GameObject:
   m_ObjectHideFlags: 0
@@ -7822,19 +8320,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6320258090450014700, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
-      value: 0.07909404
+      value: 0.02433578
       objectReference: {fileID: 0}
     - target: {fileID: 6320258090450014700, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].y
-      value: -0.006946714
+      value: -0.0060340846
       objectReference: {fileID: 0}
     - target: {fileID: 6320258090450014700, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
-      value: 0.07909401
+      value: 0.023118898
       objectReference: {fileID: 0}
     - target: {fileID: 6320258090450014700, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
-      value: 0.05413598
+      value: 0.054744404
       objectReference: {fileID: 0}
     - target: {fileID: 9183834599006299068, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: m_labelHash
@@ -7851,6 +8349,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1618649289655928183, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1827918936}
+    - targetCorrespondingSourceObject: {fileID: 1618649289655928183, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1827918948}
   m_SourcePrefab: {fileID: 100100000, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
 --- !u!1001 &3160642547542833821
 PrefabInstance:
@@ -8366,9 +8867,10 @@ SceneRoots:
   - {fileID: 4228781147401855647}
   - {fileID: 5104043812966211790}
   - {fileID: 417317998}
+  - {fileID: 432977666}
   - {fileID: 1055160506}
   - {fileID: 548563165}
   - {fileID: 1806599175}
-  - {fileID: 432977666}
+  - {fileID: 209407595}
   - {fileID: 1716456797}
   - {fileID: 436618996}

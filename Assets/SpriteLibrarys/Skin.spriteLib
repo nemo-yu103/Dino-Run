@@ -69,8 +69,55 @@ MonoBehaviour:
       m_Sprite: {fileID: 3438362232650974482, guid: 3441dc7e0fff14f4d810e58383c0530f, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 3438362232650974482, guid: 3441dc7e0fff14f4d810e58383c0530f, type: 3}
+    - m_Name: 2
+      m_Hash: 450215437
+      m_Sprite: {fileID: 7482667652216324306, guid: bc5822774f24e8d4b9b8da6ae68e099a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7482667652216324306, guid: bc5822774f24e8d4b9b8da6ae68e099a, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
+  - m_Name: Brock_1
+    m_Hash: 312265461
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 0
+      m_Hash: 886824737
+      m_Sprite: {fileID: 9010720434780433409, guid: 4f56198a26bf51143b510e9e49678698, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9010720434780433409, guid: 4f56198a26bf51143b510e9e49678698, type: 3}
+    - m_Name: 1
+      m_Hash: 64810935
+      m_Sprite: {fileID: 6298657243315628768, guid: 276aa400d0bd77a49b04ce76c765f2ea, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6298657243315628768, guid: 276aa400d0bd77a49b04ce76c765f2ea, type: 3}
+    - m_Name: 2
+      m_Hash: 450215437
+      m_Sprite: {fileID: 3516308194890372504, guid: ed3feb2b1d69851498f36bea5da092e0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3516308194890372504, guid: ed3feb2b1d69851498f36bea5da092e0, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Brock_2
+    m_Hash: 194353999
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 0
+      m_Hash: 886824737
+      m_Sprite: {fileID: 9010720434780433409, guid: 4f56198a26bf51143b510e9e49678698, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9010720434780433409, guid: 4f56198a26bf51143b510e9e49678698, type: 3}
+    - m_Name: 1
+      m_Hash: 64810935
+      m_Sprite: {fileID: 6298657243315628768, guid: 276aa400d0bd77a49b04ce76c765f2ea, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6298657243315628768, guid: 276aa400d0bd77a49b04ce76c765f2ea, type: 3}
+    - m_Name: 2
+      m_Hash: 450215437
+      m_Sprite: {fileID: 3516308194890372504, guid: ed3feb2b1d69851498f36bea5da092e0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3516308194890372504, guid: ed3feb2b1d69851498f36bea5da092e0, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639044215279223114
+  m_ModificationHash: 639045930592546206
   m_Version: 1

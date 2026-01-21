@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3151305504378637062}
   - component: {fileID: 5699301329392795203}
   - component: {fileID: 2306656700015574169}
-  - component: {fileID: 6320258090450014700}
   - component: {fileID: 5211523823858437083}
   - component: {fileID: 9183834599006299068}
   m_Layer: 0
@@ -159,68 +158,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   jumpForce: 0
   HP: 0
+  isSurvival: 1
   animator: {fileID: 3151305504378637062}
-  hpUI: {fileID: 0}
-  hpUI1: {fileID: 0}
-  hpUI2: {fileID: 0}
-  hpUI3: {fileID: 0}
+  hpui: {fileID: 0}
   hpUI4: {fileID: 0}
---- !u!60 &6320258090450014700
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618649289655928183}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.15}
-    newSize: {x: 0.17, y: 0.19}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.053535473, y: 0.08666218}
-      - {x: -0.056034096, y: 0.07530467}
-      - {x: -0.06623991, y: 0.074999996}
-      - {x: -0.06415552, y: -0.012805821}
-      - {x: -0.060507666, y: -0.085098825}
-      - {x: 0.022915523, y: -0.08457773}
-      - {x: 0.026382852, y: 0.0033100098}
-      - {x: 0.07509884, y: 0.003041301}
-      - {x: 0.075098805, y: 0.08509883}
-  m_UseDelaunayMesh: 0
+  hpUI3: {fileID: 0}
+  hpUI2: {fileID: 0}
+  hpUI1: {fileID: 0}
+  hpUI0: {fileID: 0}
 --- !u!114 &5211523823858437083
 MonoBehaviour:
   m_ObjectHideFlags: 0
