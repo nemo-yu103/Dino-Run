@@ -18,12 +18,16 @@ public class PlayerController : MonoBehaviour
 
     public GameObject hpui;
 
-
     public UI_HP hpUI4;
     public UI_HP hpUI3;
     public UI_HP hpUI2;
     public UI_HP hpUI1;
     public UI_HP hpUI0;
+
+
+    public GameObject coinEffectPrefab;
+    public GameObject jumpEffectPrefab;
+    public GameObject hitEffectPrefab;
 
     void Start()
     {
@@ -60,6 +64,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        Instantiate(jumpEffectPrefab,transform.position + new Vector3(0,0.1f,0), Quaternion.identity);
         isGround = false;
     }
 
@@ -78,10 +83,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Damage();
+            Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
         }
 
         if (collision.gameObject.CompareTag("Item"))
         {
+            Instantiate(coinEffectPrefab, transform.position + new Vector3(0,1.5f,0), Quaternion.identity);
+
             Destroy(collision.gameObject);
             if (collision.gameObject.name == "coin(Clone)")
             {

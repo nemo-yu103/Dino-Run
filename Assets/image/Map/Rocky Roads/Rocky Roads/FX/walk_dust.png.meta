@@ -112,12 +112,12 @@ TextureImporter:
       name: walk_dust_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 24
-        height: 6
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: walk_dust_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 16
         y: 0
-        width: 8
-        height: 7
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3ba9078d266d19f40800000000000000
+      spriteID: fd424b2cf71a51e4ba77abbb050fb6a0
       internalID: 5733599520645749427
       vertices: []
       indices: 
@@ -156,19 +156,19 @@ TextureImporter:
       name: walk_dust_2
       rect:
         serializedVersion: 2
-        x: 52
+        x: 32
         y: 0
-        width: 7
-        height: 7
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d697a00b5c5a1a140800000000000000
+      spriteID: b08c584f18013184ca184c4d73ea649c
       internalID: 4729243352196348269
       vertices: []
       indices: 
@@ -178,20 +178,108 @@ TextureImporter:
       name: walk_dust_3
       rect:
         serializedVersion: 2
-        x: 69
-        y: 1
-        width: 56
-        height: 9
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4c6cdacbe286ad000800000000000000
+      spriteID: b3cc66c80988ef54299267eb8e6a6467
       internalID: 61476094866212548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_dust_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb18355f3a3b4a4c859cc5657bc29c2
+      internalID: 916495298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_dust_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00249f599186744d81052410887e380
+      internalID: -1956762861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_dust_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ba11a9edb884b4d87953a19cc091b5
+      internalID: 1666061002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_dust_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d00d3a78a3714a8a0217048465b71
+      internalID: 1100668923
       vertices: []
       indices: 
       edges: []
@@ -200,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bcb93cf01c076fd4597316eacb713e80
     internalID: 0
     vertices: []
     indices: 
@@ -208,12 +296,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       walk_dust_0: 1006398939630272687
       walk_dust_1: 5733599520645749427
       walk_dust_2: 4729243352196348269
       walk_dust_3: 61476094866212548
+      walk_dust_4: 916495298
+      walk_dust_5: -1956762861
+      walk_dust_6: 1666061002
+      walk_dust_7: 1100668923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

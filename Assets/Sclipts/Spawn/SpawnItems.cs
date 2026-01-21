@@ -5,6 +5,9 @@ public class SpawnItems : MonoBehaviour
 {
     public static SpawnItems Instans;
 
+    [SerializeField] ScoreManager scoreManager;
+    float nextTime = 20;
+
     [Header("ƒXƒ|[ƒ“Ý’è")]
     public GameObject coinPrefab;
     public GameObject gemPrefab;
@@ -20,6 +23,7 @@ public class SpawnItems : MonoBehaviour
 
     private Camera mainCamera;
     public bool gameNow = false;
+    
 
     public void GameStart()
     {
@@ -34,6 +38,13 @@ public class SpawnItems : MonoBehaviour
         {
             Debug.Log("ok");
                 CoinSpawn();
+
+            if(scoreManager.timeScore >= nextTime)
+            {
+                GemSpawn();
+                nextTime += 20;
+            }
+
 
                 float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
                 yield return new WaitForSeconds(waitTime);
@@ -61,6 +72,20 @@ public class SpawnItems : MonoBehaviour
 
             Instantiate(coinPrefab, spawnPos, Quaternion.identity);
         }
+    }
+
+    void GemSpawn()
+    {
+        float camHeight = 2f * mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+        float rightEdge = mainCamera.transform.position.x + camWidth / 2f;
+
+        float randomY = Random.Range(spawnYMin,spawnYMax);
+
+        float xPos = rightEdge + spawnOffsetX;
+        Vector3 spawnPos = new Vector3(xPos + spawnOffsetX, randomY, 0f);
+
+        Instantiate(gemPrefab, spawnPos, Quaternion.identity);
     }
 
 
