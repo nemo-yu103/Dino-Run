@@ -7,7 +7,7 @@ public class ChangeMapSkin : MonoBehaviour
 
     public SpriteResolver[] sr = new SpriteResolver[14];
 
-    int nextScore = 1000;
+    int nextScore = 3000;
     string str;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class ChangeMapSkin : MonoBehaviour
         if (scoreManager.gameScore >= nextScore)
         {
             ChangeMap();
-            nextScore += 1000;
+            nextScore += 3000;
         }
     }
 
