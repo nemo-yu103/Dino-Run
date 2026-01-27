@@ -7406,7 +7406,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 9fa577b97eba4f849af8ee294abda866, type: 2}
   - {fileID: 22100000, guid: 9bc73d0323cc943439d53cfd8913ac93, type: 2}
   - {fileID: 22100000, guid: 58d35de92abbfb342b0902c1d84a33b3, type: 2}
-  m: 14
+  m: 17
 --- !u!114 &1827918940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
@@ -7464,9 +7464,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.050299257, y: 0.065204956}
-      - {x: -0.050662015, y: -0.0036431588}
-      - {x: -0.050355457, y: -0.06529739}
+    - - {x: 0.02105575, y: 0.06511533}
+      - {x: -0.030803146, y: 0.06492241}
+      - {x: -0.030600779, y: -0.003925721}
+      - {x: -0.03029422, y: -0.06529739}
       - {x: -0.009889735, y: -0.065523535}
       - {x: 0.019449648, y: 0.014158081}
       - {x: 0.08967947, y: 0.0142608825}

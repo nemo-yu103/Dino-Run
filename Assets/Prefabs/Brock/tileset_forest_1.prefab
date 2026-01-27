@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf617c42401c01845a8263dc0592202a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrockController
-  scrollSpeed: 49
+  scrollSpeed: 64
 --- !u!114 &694886869826636379
 MonoBehaviour:
   m_ObjectHideFlags: 0
