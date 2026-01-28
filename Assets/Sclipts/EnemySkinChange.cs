@@ -9,7 +9,7 @@ public class EnemySkinChange : MonoBehaviour
     [SerializeField] SpriteLibrary spriteLibrary;
     [SerializeField] SpriteResolver spriteResolver;
 
-    int skinNo = 0;
+    int animNo = 0;
 
     // skinNo と対応するキャラクター名（＝Category名）
     [SerializeField]
@@ -75,15 +75,16 @@ public class EnemySkinChange : MonoBehaviour
     // ----------------------------
     public void ChangeAnim()
     {
-        skinNo = changeMap.skinNo;
+        animNo = changeMap.skinNo;
+        
 
-        if (skinNo < 0 || skinNo >= characterNames.Length)
+        if (animNo < 0 || animNo >= characterNames.Length)
         {
             Debug.LogWarning("skinNo が範囲外です");
             return;
         }
-
-        string character = characterNames[skinNo];
+        
+        string character = characterNames[animNo];
 
         List<string> frames = GetFrames(character);
 
@@ -98,7 +99,7 @@ public class EnemySkinChange : MonoBehaviour
         {
             StopCoroutine(animCoroutine);
         }
-
+        
         animCoroutine = StartCoroutine(PlayCharacterAnim(character, frames));
     }
 

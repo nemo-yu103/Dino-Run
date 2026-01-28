@@ -1,11 +1,14 @@
 using System.Collections;
+using UnityEditor.AnimatedValues;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    [SerializeField] ChangeMapSkin changeMap;
+
     [Header("スポーン設定")]
-    public GameObject enemyPrefab1;
-    public GameObject enemyPrefab2;
+    public GameObject[] enemyPrefab1 = new GameObject[3];
+    public GameObject[] enemyPrefab2 = new GameObject[3];
     float minSpawnInterval = 2f;
     float maxSpawnInterval = 5f;
 
@@ -16,6 +19,7 @@ public class SpawnEnemy : MonoBehaviour
     private Camera mainCamera;
 
     private bool gameNow = false;
+    private int animNo;
 
     public void GameStart()
     {
@@ -44,13 +48,15 @@ public class SpawnEnemy : MonoBehaviour
     {
         GameObject selectedPrefab;
 
+        animNo = changeMap.skinNo;
+
         if (Random.value < 0.5)
         {
-            selectedPrefab = enemyPrefab1;
+            selectedPrefab = enemyPrefab1[animNo];
         }
         else
         {
-            selectedPrefab = enemyPrefab2;
+            selectedPrefab = enemyPrefab2[animNo];
         }
 
         // カメラ右端のワールド座標を取得
