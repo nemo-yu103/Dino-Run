@@ -5,9 +5,11 @@ using UnityEngine.U2D.Animation;
 
 public class EnemySkinChange : MonoBehaviour
 {
-    [SerializeField] ChangeMapSkin changeMap;
+    [SerializeField]ChangeMapSkin changeMap;
     [SerializeField] SpriteLibrary spriteLibrary;
     [SerializeField] SpriteResolver spriteResolver;
+
+    int skinNo = 0;
 
     // skinNo と対応するキャラクター名（＝Category名）
     [SerializeField]
@@ -19,6 +21,15 @@ public class EnemySkinChange : MonoBehaviour
     };
 
     Coroutine animCoroutine;
+
+    private void Start()
+    {
+        //GameObject obj = GameObject.Find("SkinManager");
+        //changeMap = GetComponent<ChangeMapSkin>();
+
+        
+    }
+
 
     // ----------------------------
     // ③ 指定キャラのフレーム数を取得 (呼ばなくてよい)
@@ -64,7 +75,7 @@ public class EnemySkinChange : MonoBehaviour
     // ----------------------------
     public void ChangeAnim()
     {
-        int skinNo = changeMap.skinNo;
+        skinNo = changeMap.skinNo;
 
         if (skinNo < 0 || skinNo >= characterNames.Length)
         {

@@ -681,6 +681,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3875505663089436938, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &145903264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145903266}
+  - component: {fileID: 145903265}
+  m_Layer: 0
+  m_Name: EnemySkin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &145903265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145903264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6079b829f1ba8904183dcbddb6f10269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySkinChange
+  changeMap: {fileID: 209407594}
+  spriteLibrary: {fileID: 4029281191965412930, guid: 284b35285acdf0842863ed9079de875c, type: 3}
+  spriteResolver: {fileID: 7262159592277262931, guid: 284b35285acdf0842863ed9079de875c, type: 3}
+  characterNames:
+  - Bear_brown
+  - Tornado
+  - Bear_polar
+--- !u!4 &145903266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145903264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1616, y: -1.05932, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209407593
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +777,7 @@ MonoBehaviour:
   - {fileID: 581201963}
   - {fileID: 372897234859637710, guid: ee1ccfd33987eb440ac9911a303629f3, type: 3}
   - {fileID: 2591631017881202672, guid: 2f95a0c2610fe2f42bef8e0d85abedf4, type: 3}
+  skinNo: 0
 --- !u!4 &209407595
 Transform:
   m_ObjectHideFlags: 0
@@ -8950,3 +9002,4 @@ SceneRoots:
   - {fileID: 1716456797}
   - {fileID: 436618996}
   - {fileID: 1728833579}
+  - {fileID: 145903266}
