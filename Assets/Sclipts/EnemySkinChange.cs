@@ -1,37 +1,108 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
 public class EnemySkinChange : MonoBehaviour
 {
-    public SpriteLibrary sr;
+    [SerializeField] ChangeMapSkin changeMap;
+    [SerializeField] SpriteLibrary spriteLibrary;
+    [SerializeField] SpriteResolver spriteResolver;
 
-    void Start()
+    // skinNo と対応するキャラクター名（＝Category名）
+    [SerializeField]
+    string[] characterNames =
     {
-        SpriteLibraryAsset asset = sr.spriteLibraryAsset;
+        "Bear_brown",
+        "Tornado",
+        "Bear_polar",
+    };
 
-        int totalCount = 0;
+    Coroutine animCoroutine;
 
-        // 全カテゴリを取得
-        var categories = asset.GetCategoryNames();
+    // ----------------------------
+    // ③ 指定キャラのフレーム数を取得 (呼ばなくてよい)
+    // ----------------------------
+    int GetFrameCount(string characterName)
+    {
+        int count = 0;
+        SpriteLibraryAsset asset = spriteLibrary.spriteLibraryAsset;
 
-        foreach ( var category in categories)
+        foreach (var label in asset.GetCategoryLabelNames(characterName))
         {
-            // カテゴリ内の全ラベルを取得
-            var labels = asset.GetCategoryLabelNames(category);
-
-            foreach (var label in labels)
+            if (asset.GetSprite(characterName, label) != null)
             {
-                // Sprite が存在するものだけカウント
-                if (asset.GetSprite(category, label) != null)
-                {
-                    totalCount++;
-                }
+                count++;
             }
         }
+        return count;
     }
 
-    void Update()
+    // ----------------------------
+    // ④ 指定キャラのフレーム一覧を取得
+    // ----------------------------
+    List<string> GetFrames(string characterName)
     {
-        
+        List<string> frames = new List<string>();
+        SpriteLibraryAsset asset = spriteLibrary.spriteLibraryAsset;
+
+        foreach (var label in asset.GetCategoryLabelNames(characterName))
+        {
+            if (asset.GetSprite(characterName, label) != null)
+            {
+                frames.Add(label);
+            }
+        }
+
+        // 0,1,2,3... の順にする
+        frames.Sort();
+        return frames;
+    }
+
+    // ----------------------------
+    // ⑤ skinNo でキャラを切り替えてアニメ再生
+    // ----------------------------
+    public void ChangeAnim()
+    {
+        int skinNo = changeMap.skinNo;
+
+        if (skinNo < 0 || skinNo >= characterNames.Length)
+        {
+            Debug.LogWarning("skinNo が範囲外です");
+            return;
+        }
+
+        string character = characterNames[skinNo];
+
+        List<string> frames = GetFrames(character);
+
+        if (frames.Count == 0)
+        {
+            Debug.LogWarning($"{character} にフレームがありません");
+            return;
+        }
+
+        // すでに再生中なら止める
+        if (animCoroutine != null)
+        {
+            StopCoroutine(animCoroutine);
+        }
+
+        animCoroutine = StartCoroutine(PlayCharacterAnim(character, frames));
+    }
+
+    // ----------------------------
+    // 実際のアニメ再生処理
+    // ----------------------------
+    IEnumerator PlayCharacterAnim(string category, List<string> frames)
+    {
+        int frame = 0;
+
+        while (true)
+        {
+            spriteResolver.SetCategoryAndLabel(category, frames[frame]);
+            frame = (frame + 1) % frames.Count;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

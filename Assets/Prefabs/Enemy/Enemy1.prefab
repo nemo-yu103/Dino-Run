@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 674929031721522668}
   - component: {fileID: 4029281191965412930}
   - component: {fileID: 7262159592277262931}
+  - component: {fileID: 3794764609039624633}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -206,6 +207,25 @@ MonoBehaviour:
   m_labelHash: 0.00000040954276
   m_SpriteKey: 0
   m_SpriteHash: 75673263
+--- !u!114 &3794764609039624633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874820501500894081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6079b829f1ba8904183dcbddb6f10269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySkinChange
+  changeMap: {fileID: 0}
+  spriteLibrary: {fileID: 4029281191965412930}
+  spriteResolver: {fileID: 7262159592277262931}
+  characterNames:
+  - Bear_brown
+  - Tornado
+  - Bear_polar
 --- !u!1001 &7930029798162320133
 PrefabInstance:
   m_ObjectHideFlags: 0

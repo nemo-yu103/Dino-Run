@@ -4,8 +4,10 @@ using UnityEngine.U2D.Animation;
 public class ChangeMapSkin : MonoBehaviour
 {
     [SerializeField]ScoreManager scoreManager;
+    //[SerializeField] EnemySkinChange enemySkin;
 
     public SpriteResolver[] sr = new SpriteResolver[14];
+    public int skinNo;
 
     int nextScore = 3000;
     string str;
@@ -22,13 +24,14 @@ public class ChangeMapSkin : MonoBehaviour
         if (scoreManager.gameScore >= nextScore)
         {
             ChangeMap();
+            //enemySkin.ChangeAnim();
             nextScore += 3000;
         }
     }
 
     void ChangeMap()
     {
-        int skinNo = Random.Range(0, 3);
+        skinNo = Random.Range(0, 3);
         Debug.Log(skinNo);
         for(int i = 0; i < 14; i++)
         {
