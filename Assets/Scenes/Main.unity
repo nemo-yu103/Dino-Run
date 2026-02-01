@@ -700,6 +700,7 @@ MonoBehaviour:
   - {fileID: 726035580}
   - {fileID: 1307386308}
   sprite: {fileID: 7885684081779559860, guid: bc98d5b4102fea046901bee57ed28741, type: 3}
+  playerController: {fileID: 1827918940}
 --- !u!1 &209407593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,6 +3351,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &734009013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5075,6 +5077,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!114 &1307796238 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6055766194169308753, guid: 85bd38121392017459a9d5d2b1f3188b, type: 3}
@@ -5403,6 +5406,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &1417211400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6540,6 +6544,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &1607774048
 GameObject:
   m_ObjectHideFlags: 0
@@ -8192,6 +8197,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1001 &2142836623271396362
 PrefabInstance:
   m_ObjectHideFlags: 0
