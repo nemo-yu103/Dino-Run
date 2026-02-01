@@ -726,6 +726,7 @@ MonoBehaviour:
   - {fileID: 581201963}
   - {fileID: 372897234859637710, guid: ee1ccfd33987eb440ac9911a303629f3, type: 3}
   - {fileID: 2591631017881202672, guid: 2f95a0c2610fe2f42bef8e0d85abedf4, type: 3}
+  skinNo: 0
 --- !u!4 &209407595
 Transform:
   m_ObjectHideFlags: 0
@@ -2348,7 +2349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.41, y: -63.75}
+  m_AnchoredPosition: {x: 65.42, y: -64.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506063795
@@ -5010,8 +5011,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bad36cd19207449b9944de437849e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  enemyPrefab1: {fileID: 3269726004625802406, guid: eb68a0f7643b4e342965b7a7779bb167, type: 3}
-  enemyPrefab2: {fileID: 7874820501500894081, guid: 284b35285acdf0842863ed9079de875c, type: 3}
+  changeMap: {fileID: 209407594}
+  enemyPrefab1:
+  - {fileID: 7874820501500894081, guid: 284b35285acdf0842863ed9079de875c, type: 3}
+  - {fileID: 7874820501500894081, guid: 72ff809fd1acfe849b8ae9c0ba4bde16, type: 3}
+  - {fileID: 7874820501500894081, guid: 4f0537cbbffdc254f83d4c95ceea4aca, type: 3}
+  enemyPrefab2:
+  - {fileID: 3269726004625802406, guid: eb68a0f7643b4e342965b7a7779bb167, type: 3}
+  - {fileID: 3269726004625802406, guid: da651511598a5fb47aefaed3c16bfab9, type: 3}
+  - {fileID: 3269726004625802406, guid: f0a2e268d5d409241a3711961b83cfec, type: 3}
 --- !u!114 &1275155943 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5855032256758922582, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}

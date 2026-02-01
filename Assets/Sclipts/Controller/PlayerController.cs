@@ -5,6 +5,9 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
 
+    [SerializeField]
+    UI_HP[] ui_hp = new UI_HP[5];
+
     [Header("ステータス")]
     public float jumpForce;
     public int HP;

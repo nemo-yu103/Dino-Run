@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FluitsController : ScrollMap
 {
-    public static FluitsController Instance;
+    //public static FluitsController Instance;
 
     void Start()
     {
