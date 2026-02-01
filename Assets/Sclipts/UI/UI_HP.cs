@@ -3,53 +3,70 @@ using UnityEngine.UI;
 
 public class UI_HP : MonoBehaviour
 {
-    private PlayerController playerController;
-    public Animator animator;
+    [SerializeField] GameObject[] hpUI = new GameObject[5];
+    [SerializeField] Sprite sprite;
+    [SerializeField] PlayerController playerController;
+
+    SpriteRenderer image;
+
+    
+    //public Animator animator;
 
 
-    public void UpdateHPUI4(int HP)
+    public void Damage()
     {
-        //HP = Mathf.Clamp(HP, 0, hpSprites.Length - 1);
-        //hpImage = hpSprites[HP];
-        if (HP == 4)
-        {
-            animator.SetBool("IsDamage4", true);
-            Debug.Log(HP);
-        }
+        int HP = playerController.HP;
+        image = hpUI[HP].GetComponent<SpriteRenderer>();
+
+        image.sprite = sprite;
     }
 
-    public void UpdateHPUI3(int HP)
-    {
-        if (HP == 3)
-        {
-            animator.SetBool("IsDamage3", true);
-        }
 
-    }
 
-    public void UpdateHPUI2(int HP)
-    {
-        if (HP == 2)
-        {
-            animator.SetBool("IsDamage2", true);
-        }
 
-    }
+    //public void UpdateHPUI4(int HP)
+    //{
+    //    //HP = Mathf.Clamp(HP, 0, hpSprites.Length - 1);
+    //    //hpImage = hpSprites[HP];
+    //    if (HP == 4)
+    //    {
+    //        animator.SetBool("IsDamage4", true);
+    //        Debug.Log(HP);
+    //    }
+    //}
 
-    public void UpdateHPUI1(int HP)
-    {
-        if (HP == 1)
-        {
-            animator.SetBool("IsDamage1", true);
-        }
+    //public void UpdateHPUI3(int HP)
+    //{
+    //    if (HP == 3)
+    //    {
+    //        animator.SetBool("IsDamage3", true);
+    //    }
 
-    }
+    //}
 
-    public void UpdateHPUI0(int HP)
-    {
-        if (HP == 0)
-        {
-            animator.SetBool("IsDamage0", true);
-        }
-    }
+    //public void UpdateHPUI2(int HP)
+    //{
+    //    if (HP == 2)
+    //    {
+    //        animator.SetBool("IsDamage2", true);
+    //    }
+
+    //}
+
+    //public void UpdateHPUI1(int HP)
+    //{
+    //    if (HP == 1)
+    //    {
+    //        animator.SetBool("IsDamage1", true);
+    //    }
+
+    //}
+
+    //public void UpdateHPUI0(int HP)
+    //{
+    //    if (HP == 0)
+    //    {
+    //        animator.SetBool("IsDamage0", true);
+    //    }
+    //}
 }

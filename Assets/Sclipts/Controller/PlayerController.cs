@@ -5,8 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
 
-    [SerializeField]
-    UI_HP[] ui_hp = new UI_HP[5];
+    [SerializeField] UI_HP uI_HP;
+
+    //[SerializeField]
+    //UI_HP[] ui_hp = new UI_HP[5];
 
     [Header("ステータス")]
     public float jumpForce;
@@ -21,11 +23,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject hpui;
 
-    public UI_HP hpUI4;
-    public UI_HP hpUI3;
-    public UI_HP hpUI2;
-    public UI_HP hpUI1;
-    public UI_HP hpUI0;
+    //public UI_HP hpUI4;
+    //public UI_HP hpUI3;
+    //public UI_HP hpUI2;
+    //public UI_HP hpUI1;
+    //public UI_HP hpUI0;
 
 
     public GameObject coinEffectPrefab;
@@ -136,11 +138,12 @@ public class PlayerController : MonoBehaviour
         }
         Invoke(nameof(EndDamgeAnimation), 1.5f);
 
-        hpUI4.UpdateHPUI4(HP);
-        hpUI3.UpdateHPUI3(HP);
-        hpUI2.UpdateHPUI2(HP);
-        hpUI1.UpdateHPUI1(HP);
-        hpUI0.UpdateHPUI0(HP);
+        uI_HP.Damage();
+        //hpUI4.UpdateHPUI4(HP);
+        //hpUI3.UpdateHPUI3(HP);
+        //hpUI2.UpdateHPUI2(HP);
+        //hpUI1.UpdateHPUI1(HP);
+        //hpUI0.UpdateHPUI0(HP);
     }
 
     private void EndDamgeAnimation()
