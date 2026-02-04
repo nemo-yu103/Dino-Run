@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35815c0ebd65947b686af69114353e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnItems
+  scoreManager: {fileID: 0}
   coinPrefab: {fileID: 2312900121250218218, guid: 17299e7f81473f1458df151cee17ba98, type: 3}
   gemPrefab: {fileID: 8976634343606009520, guid: 4686f9a8d36cf5847933bac2c1826bf1, type: 3}
   gameNow: 0
@@ -725,6 +726,7 @@ MonoBehaviour:
   - {fileID: 581201963}
   - {fileID: 372897234859637710, guid: ee1ccfd33987eb440ac9911a303629f3, type: 3}
   - {fileID: 2591631017881202672, guid: 2f95a0c2610fe2f42bef8e0d85abedf4, type: 3}
+  skinNo: 0
 --- !u!4 &209407595
 Transform:
   m_ObjectHideFlags: 0
@@ -3310,11 +3312,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4936102738803929860, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &726035582 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3977196162013112889, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
-  m_PrefabInstance: {fileID: 4228781147401855647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &726035585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3327,7 +3324,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_HP
-  animator: {fileID: 726035582}
+  hpUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &734009013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,8 +5013,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bad36cd19207449b9944de437849e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  enemyPrefab1: {fileID: 3269726004625802406, guid: eb68a0f7643b4e342965b7a7779bb167, type: 3}
-  enemyPrefab2: {fileID: 7874820501500894081, guid: 284b35285acdf0842863ed9079de875c, type: 3}
+  changeMap: {fileID: 0}
+  enemyPrefab1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyPrefab2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1275155943 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5855032256758922582, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
@@ -5027,11 +5038,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4005684497062706431, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1307386310 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5313062233115517484, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
-  m_PrefabInstance: {fileID: 4228781147401855647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1307386313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5044,7 +5050,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_HP
-  animator: {fileID: 1307386310}
+  hpUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!114 &1307796238 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6055766194169308753, guid: 85bd38121392017459a9d5d2b1f3188b, type: 3}
@@ -5354,11 +5367,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 84364667944846696, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1411586190 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 12637086521311104, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
-  m_PrefabInstance: {fileID: 4228781147401855647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1411586193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5371,7 +5379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_HP
-  animator: {fileID: 1411586190}
+  hpUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &1417211400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6490,11 +6505,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5823019711863712179, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1604791639 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 652326478232369684, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
-  m_PrefabInstance: {fileID: 4228781147401855647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1604791642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6507,7 +6517,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_HP
-  animator: {fileID: 1604791639}
+  hpUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &1607774048
 GameObject:
   m_ObjectHideFlags: 0
@@ -8140,11 +8157,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5449917910083439652, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
   m_PrefabInstance: {fileID: 4228781147401855647}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2120487717 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3199968590137435042, guid: 6ab96d2a6afc03b41a989b66a917b7d8, type: 3}
-  m_PrefabInstance: {fileID: 4228781147401855647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2120487720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8157,7 +8169,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ec4682d78da9a4e9fb93382eb5e9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_HP
-  animator: {fileID: 2120487717}
+  hpUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprite: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1001 &2142836623271396362
 PrefabInstance:
   m_ObjectHideFlags: 0
