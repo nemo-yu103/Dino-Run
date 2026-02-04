@@ -29,8 +29,8 @@ public class BrockController : MonoBehaviour
         isScrolling = false;
     }
 
-    public void GetFluits()
-    {
-        scrollSpeed += 1f;
-    }
+    //public void GetFluits()
+    //{
+    //    scrollSpeed += 1f;
+    //}
 }

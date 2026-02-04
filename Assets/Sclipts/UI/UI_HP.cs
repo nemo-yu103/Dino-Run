@@ -5,6 +5,7 @@ public class UI_HP : MonoBehaviour
 {
     [SerializeField] GameObject[] hpUI = new GameObject[5];
     [SerializeField] Sprite sprite;
+    [SerializeField] Sprite sprite2;
     [SerializeField] PlayerController playerController;
 
     SpriteRenderer image;
@@ -15,13 +16,20 @@ public class UI_HP : MonoBehaviour
 
     public void Damage()
     {
+
         int HP = playerController.HP;
         image = hpUI[HP].GetComponent<SpriteRenderer>();
-
+        
         image.sprite = sprite;
     }
 
+    public void Heal()
+    {
+        int HP = playerController.HP;
+        image = hpUI[HP].GetComponent <SpriteRenderer>();
 
+        image.sprite = sprite2;
+    }
 
 
     //public void UpdateHPUI4(int HP)

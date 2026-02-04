@@ -21,9 +21,9 @@ public class FluitsController : ScrollMap
 
     }
 
-    public void GetFluits()
-    {
-        scrollSpeed += 1f;
-    }
+    //public void GetFluits()
+    //{
+    //    scrollSpeed += 1f;
+    //}
     
 }

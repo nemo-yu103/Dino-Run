@@ -23,7 +23,7 @@ public class ScoreManager : MonoBehaviour
         if (judge.gameNow == true)
         {
             timeScore += Time.deltaTime;
-            Debug.Log(timeScore);
+            
         }
         if(playerController.isSurvival==true)
         {

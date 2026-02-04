@@ -111,7 +111,9 @@ public class PlayerController : MonoBehaviour
             if(collision.gameObject.name == "apple(Clone)")
             {
                 Destroy(collision.gameObject);
-                GameManager.Instance.PlayGame();
+
+                uI_HP.Heal();
+                HP += 1;
             }
             else if (collision.gameObject.name == "banana(Clone)")
             {

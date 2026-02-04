@@ -32,7 +32,7 @@ public class ChangeMapSkin : MonoBehaviour
     void ChangeMap()
     {
         skinNo = Random.Range(0, 3);
-        Debug.Log(skinNo);
+        
         for(int i = 0; i < 14; i++)
         {
             if (i >= 0 && i < 6)

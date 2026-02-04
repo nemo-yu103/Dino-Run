@@ -27,10 +27,10 @@ public class GameManager : MonoBehaviour
     public void PlayGame()
     {
         //map.GetFluits();
-        brockController.GetFluits();
-        fluitsController.GetFluits();
-        enemyController.GetFluits();
-        ItemsController.Instance.GetFluits();
+        //brockController.GetFluits();
+        //fluitsController.GetFluits();
+        //enemyController.GetFluits();
+        //ItemsController.Instance.GetFluits();
     }
 
 
