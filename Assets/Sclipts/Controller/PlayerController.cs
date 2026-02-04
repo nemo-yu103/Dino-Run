@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.x <= -6 && isSurvival)
         {
-            transform.Translate(0.003f, 0, 0);
+            transform.Translate(3f * Time.deltaTime, 0, 0);
         }
 
 
