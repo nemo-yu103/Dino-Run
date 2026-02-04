@@ -71,9 +71,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 3438362232650974482, guid: 3441dc7e0fff14f4d810e58383c0530f, type: 3}
     - m_Name: 2
       m_Hash: 450215437
-      m_Sprite: {fileID: 7482667652216324306, guid: bc5822774f24e8d4b9b8da6ae68e099a, type: 3}
+      m_Sprite: {fileID: 21300000, guid: dbd50b814f4c09247bc75b474d01ca12, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7482667652216324306, guid: bc5822774f24e8d4b9b8da6ae68e099a, type: 3}
+      m_SpriteOverride: {fileID: 21300000, guid: dbd50b814f4c09247bc75b474d01ca12, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
   - m_Name: Brock_1
@@ -119,5 +119,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639045930592546206
+  m_ModificationHash: 639058195422611339
   m_Version: 1

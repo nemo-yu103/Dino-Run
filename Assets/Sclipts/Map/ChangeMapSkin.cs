@@ -9,7 +9,7 @@ public class ChangeMapSkin : MonoBehaviour
     public SpriteResolver[] sr = new SpriteResolver[14];
     public int skinNo;
 
-    int nextScore = 1000;
+    int nextScore = 4000;
     string str;
 
     private void Awake()
@@ -25,7 +25,7 @@ public class ChangeMapSkin : MonoBehaviour
         {
             ChangeMap();
             
-            nextScore += 3000;
+            nextScore += 4000;
         }
     }
 
@@ -57,6 +57,6 @@ public class ChangeMapSkin : MonoBehaviour
             }
                 sr[i].SetCategoryAndLabel(str, skinNo.ToString());
         }
-        //sr.SetCategoryAndLabel("Ground",skinNo.ToString());
+        
     }
 }
