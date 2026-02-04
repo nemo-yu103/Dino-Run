@@ -6,6 +6,7 @@ public class ButtonFunction : MonoBehaviour
     [SerializeField] UI_Count ui;
     [SerializeField] UIManager uiManager;
     [SerializeField] GameObject titleui;
+    [SerializeField] AnimationChanger changer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,5 +38,10 @@ public class ButtonFunction : MonoBehaviour
         #endif
 
         return;
+    }
+
+    public void ButtonSkin()
+    {
+        changer.OnSkinButtonClick();
     }
 }

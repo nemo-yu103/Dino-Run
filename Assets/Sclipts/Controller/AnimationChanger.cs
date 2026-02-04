@@ -4,17 +4,27 @@ public class AnimationChanger : MonoBehaviour
 {
 	Animator anim;
 	[SerializeField] AnimatorOverrideController[] aoc;
-	[SerializeField] int m;
+	int charaskinNo;
 
 	void Start()
 	{
 		anim = GetComponent<Animator>();
-		ChangeColor(m);
+		
 	}
 
 	void Update()
 	{
 		
+	}
+
+	public void OnSkinButtonClick()
+	{
+		charaskinNo++;
+		if(charaskinNo >= aoc.Length)
+		{
+			charaskinNo = 0;
+		}
+		ChangeColor(charaskinNo);
 	}
 
 	void ChangeColor(int n) {
