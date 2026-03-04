@@ -5,7 +5,14 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
 
-    [SerializeField] UI_HP uI_HP;
+    [SerializeField] UI_HP uI_HP; 
+    [SerializeField] private AudioClip jumpSE;
+    [SerializeField] private AudioClip getCoinSE;
+    [SerializeField] private AudioClip getGemSE;
+    [SerializeField] private AudioClip deathSE;
+    [SerializeField] private AudioClip damageSE;
+    [SerializeField] private AudioClip bananaSE;
+    [SerializeField] private AudioClip appleSE;
 
     //[SerializeField]
     //UI_HP[] ui_hp = new UI_HP[5];
@@ -16,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isGround = true;
     public bool isSurvival = true;
+    private bool isSEPlaying = false;
 
     Rigidbody2D rb;
 
@@ -52,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             Jump();
+            AudioManager.Instance.PlaySE(jumpSE);
         }
 
         //âÊñ äOÇ…èoÇΩÇÁéÄñS
@@ -88,6 +97,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Damage();
+            AudioManager.Instance.PlaySE(damageSE,1.2f);
             Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
         }
 
@@ -98,10 +108,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (collision.gameObject.name == "coin(Clone)")
             {
+                AudioManager.Instance.PlaySE(getCoinSE,0.5f);
                 UI_Coin.Instance.AddCoin();
             }
             else if (collision.gameObject.name == "gem(Clone)")
             {
+                AudioManager.Instance.PlaySE(getGemSE);
                 UI_Gem.Instance.AddGem();
             }
         }
@@ -110,6 +122,7 @@ public class PlayerController : MonoBehaviour
         {
             if(collision.gameObject.name == "apple(Clone)")
             {
+                AudioManager.Instance.PlaySE(appleSE,1.2f);
                 Destroy(collision.gameObject);
                 if(HP <= 4)
                 {
@@ -119,6 +132,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (collision.gameObject.name == "banana(Clone)")
             {
+                AudioManager.Instance.PlaySE(bananaSE,1.2f);
                 Destroy(collision.gameObject);
                 jumpForce += 1f;
             }
@@ -161,6 +175,11 @@ public class PlayerController : MonoBehaviour
         isSurvival = false;
         
         animator.SetTrigger("Die");
+        if(!isSEPlaying)
+        {
+            AudioManager.Instance.PlaySE(deathSE,1.2f);
+            isSEPlaying = true;
+        }
         GameManager.Instance.GameOver();
 
         Invoke("Destroy", 3f);
@@ -169,12 +188,6 @@ public class PlayerController : MonoBehaviour
     private void Destroy()
     {
         Destroy(gameObject);
-        Invoke("GameOverScreen", 1.5f);
-    }
-
-    void GameOverScreen()
-    {
-        
     }
 
 }

@@ -7,8 +7,8 @@ public class ButtonFunction : MonoBehaviour
     [SerializeField] UIManager uiManager;
     [SerializeField] GameObject titleui;
     [SerializeField] AnimationChanger changer;
+    [SerializeField] private AudioClip clickSE;
 
-    
     void Start()
     {
         
@@ -21,6 +21,7 @@ public class ButtonFunction : MonoBehaviour
 
     public void ButtonStart() {
 
+        AudioManager.Instance.PlaySE(clickSE);
         ui.StartCountDown();
         uiManager.DisplayUI();
         Destroy(this.gameObject.transform.parent.parent.gameObject);
@@ -30,10 +31,12 @@ public class ButtonFunction : MonoBehaviour
 
     public void ButtonExit() {
 
-        # if UNITY_EDITOR
+        AudioManager.Instance.PlaySE(clickSE);
+
+#if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
-        # else
-            Application.Quit();
+#else
+        Application.Quit();
         #endif
 
         return;
@@ -41,6 +44,7 @@ public class ButtonFunction : MonoBehaviour
 
     public void ButtonSkin()
     {
+        AudioManager.Instance.PlaySE(clickSE);
         changer.OnSkinButtonClick();
     }
 }

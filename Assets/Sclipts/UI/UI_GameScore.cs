@@ -6,6 +6,7 @@ public class UI_GameScore : MonoBehaviour
 {
     [SerializeField] ScoreManager scoreManager;
     [SerializeField] PlayerController playerController;
+    [SerializeField] private AudioClip gameScoreSE;
 
     public SpriteResolver []sr = new SpriteResolver [9];
     
@@ -33,6 +34,11 @@ public class UI_GameScore : MonoBehaviour
             sr[i].SetCategoryAndLabel(Mathf.Pow(10, i).ToString("F0"), answer.ToString());
             gameScore = gameScore - (answer * (int)Mathf.Pow(10, i));
         }
+    }
+
+    public void PlayGameScoreSE()
+    {
+        AudioManager.Instance.PlaySE(gameScoreSE,0.7f);
     }
 
 }

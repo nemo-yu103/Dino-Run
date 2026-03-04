@@ -4,6 +4,7 @@ public class ScrollMap : MonoBehaviour
 {
     public static ScrollMap Instance;
 
+    [SerializeField] private AudioClip gameBGM;
 
     public float scrollSpeed;
     public float resetPositionX;
@@ -29,9 +30,15 @@ public class ScrollMap : MonoBehaviour
         }
     }
 
+    public void PlayBGM()
+    {
+        AudioManager.Instance.PlayBGM(gameBGM,0.3f);
+    }
+
     public void StopScroll()
     {
         isScrolling = false;
+        AudioManager.Instance.StopBGM();
     }
 
     /*public void GetFluits()

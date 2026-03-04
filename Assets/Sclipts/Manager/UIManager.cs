@@ -4,11 +4,14 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
+    [SerializeField] UI_GameScore gameScore;
     [SerializeField] GameObject ui_coin;
     [SerializeField] GameObject ui_gem;
     [SerializeField] GameObject ui_hp;
     [SerializeField] GameObject ui_score;
     [SerializeField] GameObject ui_gamescore;
+
+    bool playSE = false;
 
     void Start()
     {
@@ -43,6 +46,11 @@ public class UIManager : MonoBehaviour
     void GameScoreDisplay()
     {
         ui_gamescore.SetActive(true);
+        if (!playSE)
+        {
+            gameScore.PlayGameScoreSE();
+            playSE = true;
+        }
         Invoke("LoadScenes", 4f);
     }
 

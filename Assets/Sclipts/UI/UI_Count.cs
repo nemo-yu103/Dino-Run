@@ -8,6 +8,9 @@ public class UI_Count : MonoBehaviour
     public bool isCountDown;
     private float countTime = 4f;
 
+    [SerializeField] private AudioClip countdownSE;
+    [SerializeField] private AudioClip goSE;
+
     [SerializeField]
     GameObject go;
     SpriteResolver CT;
@@ -18,6 +21,7 @@ public class UI_Count : MonoBehaviour
     public SpawnItems items;
     public BrockGenerator brock;
     public SpawnFluits fluits;
+    public ScrollMap map;
 
     void Start()
     {
@@ -46,13 +50,14 @@ public class UI_Count : MonoBehaviour
         if (countTime >= 0)
         {
             CT.SetCategoryAndLabel("CountNumber", label.ToString());
-
+            
             countTime = countTime - Time.deltaTime;
         }
         
         if (label == 0)
         {
             countTime = -1;
+            AudioManager.Instance.PlaySE(goSE);
             Invoke("GameStart", 0.5f);
         }
     }
@@ -65,5 +70,6 @@ public class UI_Count : MonoBehaviour
         items.GameStart();
         brock.GameStart();
         fluits.GameStart();
+        map.PlayBGM();
     }
 }
