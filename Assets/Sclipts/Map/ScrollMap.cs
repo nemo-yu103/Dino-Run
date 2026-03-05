@@ -41,10 +41,4 @@ public class ScrollMap : MonoBehaviour
         AudioManager.Instance.StopBGM();
     }
 
-    /*public void GetFluits()
-    {
-        Debug.Log("ok");
-        scrollSpeed += 1f;
-    }*/
-
 }

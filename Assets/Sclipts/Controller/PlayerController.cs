@@ -14,9 +14,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip bananaSE;
     [SerializeField] private AudioClip appleSE;
 
-    //[SerializeField]
-    //UI_HP[] ui_hp = new UI_HP[5];
-
     [Header("ステータス")]
     public float jumpForce;
     public int HP;
@@ -30,13 +27,6 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public GameObject hpui;
-
-    //public UI_HP hpUI4;
-    //public UI_HP hpUI3;
-    //public UI_HP hpUI2;
-    //public UI_HP hpUI1;
-    //public UI_HP hpUI0;
-
 
     public GameObject coinEffectPrefab;
     public GameObject jumpEffectPrefab;
@@ -157,11 +147,7 @@ public class PlayerController : MonoBehaviour
         Invoke(nameof(EndDamgeAnimation), 1.5f);
 
         uI_HP.Damage();
-        //hpUI4.UpdateHPUI4(HP);
-        //hpUI3.UpdateHPUI3(HP);
-        //hpUI2.UpdateHPUI2(HP);
-        //hpUI1.UpdateHPUI1(HP);
-        //hpUI0.UpdateHPUI0(HP);
+        
     }
 
     private void EndDamgeAnimation()
