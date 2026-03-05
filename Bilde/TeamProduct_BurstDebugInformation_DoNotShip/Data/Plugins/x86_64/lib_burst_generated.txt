@@ -1,4 +1,4 @@
-Library: C:\Users\student\Downloads\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+Library: C:\Student\Nemaki\Unity\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --minimum-os-version=
 --backend=burst-llvm-19
@@ -10,10 +10,10 @@ Library: C:\Users\student\Downloads\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_6
 --target-framework=NetFramework
 --linker-options=PdbAltPath="TeamProduct_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\student\Downloads\Dino-Run\Temp\Burst
+--temp-folder=C:\Student\Nemaki\Unity\Dino-Run\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\student\Downloads\Dino-Run\Library\Burst
---output=C:\Users\student\Downloads\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Student\Nemaki\Unity\Dino-Run\Library\Burst
+--output=C:\Student\Nemaki\Unity\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -71,10 +71,10 @@ Library: C:\Users\student\Downloads\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_6
 --target-framework=NetFramework
 --linker-options=PdbAltPath="TeamProduct_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\student\Downloads\Dino-Run\Temp\Burst
+--temp-folder=C:\Student\Nemaki\Unity\Dino-Run\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\student\Downloads\Dino-Run\Library\Burst
---output=C:\Users\student\Downloads\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Student\Nemaki\Unity\Dino-Run\Library\Burst
+--output=C:\Student\Nemaki\Unity\Dino-Run\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
