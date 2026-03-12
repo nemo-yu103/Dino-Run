@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     private bool isSEPlaying = false;
 
     Rigidbody2D rb;
+    float nprmalGravity = 1f;
+    float fastGravity = 10f;
+
+    int bananaPower = 0;
 
     public Animator animator;
 
@@ -53,6 +57,22 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySE(jumpSE);
         }
 
+        if(Input.GetKeyDown(KeyCode.DownArrow) && !isGround && bananaPower >= 1)
+        {
+            
+            
+            rb.gravityScale = fastGravity;
+            
+            bananaPower -= 1;
+        }
+        else
+        {
+            rb.gravityScale = nprmalGravity;
+        }
+
+        
+
+
         //‰æ–ÊŠO‚Éo‚½‚ç€–S
         if (transform.position.x <= -10)
         {
@@ -60,7 +80,7 @@ public class PlayerController : MonoBehaviour
             {
                 HP -= 1;
             }
-            
+
             Die();
         }
     }
@@ -78,6 +98,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGround = false;
         }
     }
 
@@ -124,7 +152,10 @@ public class PlayerController : MonoBehaviour
             {
                 AudioManager.Instance.PlaySE(bananaSE,1.2f);
                 Destroy(collision.gameObject);
-                jumpForce += 1f;
+                if(bananaPower < 5)
+                {
+                    bananaPower += 1;
+                }
             }
            
         }

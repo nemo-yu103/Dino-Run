@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     public int gameScore = 0;
     public int coinScore;
     public int gemScore;
+    public int changeSpeed = 4000;
 
 
     void Start()
@@ -41,6 +42,17 @@ public class ScoreManager : MonoBehaviour
         coinScore = UI_Coin.Instance.score * 100;
         gemScore = UI_Gem.Instance.score * 1000;
         gameScore = Mathf.RoundToInt(timeScore) + coinScore + gemScore;
+
+        if(gameScore > changeSpeed)
+        {
+            ChangeGameSpeed();
+        }
+    }
+
+    void ChangeGameSpeed()
+    {
+        Time.timeScale += 0.5f * Time.deltaTime;
+        changeSpeed += 4000;
     }
 
 }
