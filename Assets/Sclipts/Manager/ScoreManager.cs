@@ -51,7 +51,7 @@ public class ScoreManager : MonoBehaviour
 
     void ChangeGameSpeed()
     {
-        Time.timeScale += 0.5f * Time.deltaTime;
+        Time.timeScale += 1.2f * Time.deltaTime;
         changeSpeed += 4000;
     }
 

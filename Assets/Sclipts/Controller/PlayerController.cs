@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
+
         if (transform.position.x <= -6 && isSurvival)
         {
             transform.Translate(3f * Time.deltaTime, 0, 0);
@@ -57,13 +59,18 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySE(jumpSE);
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow) && !isGround && bananaPower >= 1)
+        if(Input.GetKeyDown(KeyCode.DownArrow) && !isGround)
         {
+            if (bananaPower > 0)
+            {
+                rb.gravityScale = fastGravity;
+            }
+                
+            if (isGround = true)
+            {
+                bananaPower -= 1;
+            }
             
-            
-            rb.gravityScale = fastGravity;
-            
-            bananaPower -= 1;
         }
         else
         {
@@ -89,6 +96,12 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         Instantiate(jumpEffectPrefab,transform.position + new Vector3(0,0.1f,0), Quaternion.identity);
+        //isGround = false;
+        OutGeround();
+    }
+
+    void OutGeround()
+    {
         isGround = false;
     }
 
@@ -98,14 +111,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGround = false;
         }
     }
 
