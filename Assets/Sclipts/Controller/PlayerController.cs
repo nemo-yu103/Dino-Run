@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool isGround = true;
     public bool isSurvival = true;
     private bool isSEPlaying = false;
+    private bool isFastFalling = false;
 
     Rigidbody2D rb;
     float nprmalGravity = 1f;
@@ -59,18 +60,14 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySE(jumpSE);
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow) && !isGround)
+        if(Input.GetKeyDown(KeyCode.DownArrow) && !isGround && !isFastFalling)
         {
-            if (bananaPower > 0)
-            {
-                rb.gravityScale = fastGravity;
-            }
-                
-            if (isGround = true)
-            {
-                bananaPower -= 1;
-            }
-            
+            isFastFalling = true;
+        }
+
+        if(isFastFalling)
+        {
+            rb.gravityScale = fastGravity;
         }
         else
         {
@@ -111,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
+            isFastFalling = false;
         }
     }
 
