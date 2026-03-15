@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 
 public class PlayerController : MonoBehaviour
@@ -22,6 +23,10 @@ public class PlayerController : MonoBehaviour
     public bool isSurvival = true;
     private bool isSEPlaying = false;
     private bool isFastFalling = false;
+    private bool isDashing = false;
+
+    float dashSpeed = 5f;
+    float dashTime = 2f;
 
     Rigidbody2D rb;
     float nprmalGravity = 1f;
@@ -46,7 +51,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //画面外に出たら死亡
+        if (transform.position.x <= -10)
+        {
+            while (HP == 0)
+            {
+                HP -= 1;
+            }
 
+            Die();
+        }
 
         if (transform.position.x <= -6 && isSurvival)
         {
@@ -74,19 +88,27 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = nprmalGravity;
         }
 
-        
-
-
-        //画面外に出たら死亡
-        if (transform.position.x <= -10)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && bananaPower > 0 && !isDashing)
         {
-            while (HP == 0)
-            {
-                HP -= 1;
-            }
-
-            Die();
+            bananaPower -= 1;
+            StartCoroutine(Dash());
         }
+
+    }
+
+    IEnumerator Dash()
+    {
+        isDashing = true;
+
+        float timer = 0f;
+        while (timer < dashTime)
+        {
+            Time.timeScale += dashSpeed * Time.deltaTime;
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        isDashing = false;
     }
 
     void Jump()
@@ -115,7 +137,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //ダメージを受ける
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && !isDashing)
         {
             Damage();
             AudioManager.Instance.PlaySE(damageSE,1.2f);
