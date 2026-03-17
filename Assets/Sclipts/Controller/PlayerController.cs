@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
 
-    [SerializeField] UI_HP uI_HP; 
+    [SerializeField] UI_HP uI_HP;
+    [SerializeField] ScrollMap map;
     [SerializeField] private AudioClip jumpSE;
     [SerializeField] private AudioClip getCoinSE;
     [SerializeField] private AudioClip getGemSE;
@@ -23,7 +24,6 @@ public class PlayerController : MonoBehaviour
     public bool isSurvival = true;
     private bool isSEPlaying = false;
     private bool isFastFalling = false;
-    private bool isDashing = false;
 
     float dashSpeed = 5f;
     float dashTime = 2f;
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = nprmalGravity;
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && bananaPower > 0 && !isDashing)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && bananaPower > 0)
         {
             bananaPower -= 1;
             StartCoroutine(Dash());
@@ -98,17 +98,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Dash()
     {
-        isDashing = true;
+        map.isDashing = true;
 
-        float timer = 0f;
-        while (timer < dashTime)
-        {
-            Time.timeScale += dashSpeed * Time.deltaTime;
-            timer += Time.deltaTime;
-            yield return null;
-        }
+        yield return new WaitForSeconds(2f);
 
-        isDashing = false;
+        map.isDashing = false;
     }
 
     void Jump()
@@ -137,7 +131,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //ƒ_ƒ[ƒW‚ðŽó‚¯‚é
-        if (collision.gameObject.CompareTag("Enemy") && !isDashing)
+        if (collision.gameObject.CompareTag("Enemy") && !map.isDashing)
         {
             Damage();
             AudioManager.Instance.PlaySE(damageSE,1.2f);

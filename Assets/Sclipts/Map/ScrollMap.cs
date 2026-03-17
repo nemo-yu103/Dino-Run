@@ -6,15 +6,17 @@ public class ScrollMap : MonoBehaviour
 
     [SerializeField] private AudioClip gameBGM;
 
+    public float baseScrollSpeed = 4f;
+    public float dashScrollSpeed = 8f;
     public float scrollSpeed;
     public float resetPositionX;
     public float startPositionX;
 
     public bool isScrolling = true;
+    public bool isDashing = false;
 
     void Start()
     {
-        scrollSpeed = 4f;
         resetPositionX = -17.25f;
         startPositionX = 3f;
     }
@@ -22,6 +24,13 @@ public class ScrollMap : MonoBehaviour
     void Update()
     {
         if (!isScrolling) return;
+
+        scrollSpeed = baseScrollSpeed;
+
+        if (isDashing)
+        {
+            scrollSpeed += dashScrollSpeed;
+        }
 
         transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
         if (transform.position.x <= resetPositionX)
