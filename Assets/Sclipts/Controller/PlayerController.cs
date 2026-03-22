@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] UI_HP uI_HP;
     [SerializeField] ScrollMap map;
+    [SerializeField] ScrollBackground background;
+
+
+
+
+
     [SerializeField] private AudioClip jumpSE;
     [SerializeField] private AudioClip getCoinSE;
     [SerializeField] private AudioClip getGemSE;
@@ -74,12 +80,12 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySE(jumpSE);
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow) && !isGround && !isFastFalling)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !isGround && !isFastFalling)
         {
             isFastFalling = true;
         }
 
-        if(isFastFalling)
+        if (isFastFalling)
         {
             rb.gravityScale = fastGravity;
         }
@@ -87,23 +93,8 @@ public class PlayerController : MonoBehaviour
         {
             rb.gravityScale = nprmalGravity;
         }
-
-        if(Input.GetKeyDown(KeyCode.LeftShift) && bananaPower > 0)
-        {
-            bananaPower -= 1;
-            StartCoroutine(Dash());
-        }
-
     }
 
-    IEnumerator Dash()
-    {
-        map.isDashing = true;
-
-        yield return new WaitForSeconds(2f);
-
-        map.isDashing = false;
-    }
 
     void Jump()
     {
@@ -171,14 +162,23 @@ public class PlayerController : MonoBehaviour
             {
                 AudioManager.Instance.PlaySE(bananaSE,1.2f);
                 Destroy(collision.gameObject);
-                if(bananaPower < 5)
-                {
-                    bananaPower += 1;
-                }
+
+                map.isDashing = true;
+                background.isDashing = true;
+
+
+
+                Invoke(nameof(DashEnd), dashTime);
             }
            
         }
 
+    }
+
+    public void DashEnd()
+    {
+        map.isDashing = false;
+        background.isDashing = false;
     }
 
     public void Damage()

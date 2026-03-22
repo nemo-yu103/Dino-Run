@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class ScrollBackground : MonoBehaviour
 {
+    public float dashScrollSpeed = 8f;
+    public float baseScrollSpeed;
     public float scrollSpeed;
     public float resetPositionX;
     public float startPositionX;
 
     private bool isScrolling = true;
+    public bool isDashing = false;
 
     void Start()
     {
@@ -16,6 +19,13 @@ public class ScrollBackground : MonoBehaviour
     void Update()
     {
         if (!isScrolling) return;
+
+        scrollSpeed = baseScrollSpeed;
+
+        if (isDashing)
+        {
+            scrollSpeed += dashScrollSpeed;
+        }
 
         transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
         if (transform.position.x <= resetPositionX)
@@ -27,11 +37,6 @@ public class ScrollBackground : MonoBehaviour
     public void StopScroll()
     {
         isScrolling = false;
-    }
-
-    public void GetFluits()
-    {
-        scrollSpeed += 1f;
     }
 
 }

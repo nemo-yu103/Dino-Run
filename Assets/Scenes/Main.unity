@@ -3320,6 +3320,7 @@ MonoBehaviour:
   gameScore: 0
   coinScore: 0
   gemScore: 0
+  changeSpeed: 4000
 --- !u!1 &581201960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5693,9 +5694,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8a1875c9f0a9a46ad19b74987bc0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollBackground
-  scrollSpeed: 1
+  dashScrollSpeed: 8
+  baseScrollSpeed: 1
+  scrollSpeed: 0
   resetPositionX: -41
   startPositionX: 0.02
+  isDashing: 0
 --- !u!1 &1216980718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7681,10 +7685,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollMap
   gameBGM: {fileID: 8300000, guid: 92b4d2488ad2d9a47a988ba7acdc5e44, type: 3}
+  baseScrollSpeed: 4
+  dashScrollSpeed: 8
   scrollSpeed: 4
   resetPositionX: -17.25
   startPositionX: 3
   isScrolling: 1
+  isDashing: 0
 --- !u!1 &1674400505
 GameObject:
   m_ObjectHideFlags: 0
@@ -8493,9 +8500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8a1875c9f0a9a46ad19b74987bc0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollBackground
-  scrollSpeed: 0.5
+  dashScrollSpeed: 8
+  baseScrollSpeed: 0.5
+  scrollSpeed: 0
   resetPositionX: -41
   startPositionX: 0.02
+  isDashing: 0
 --- !u!1 &1863340527
 GameObject:
   m_ObjectHideFlags: 0
@@ -9150,6 +9160,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 1639802872}
+    - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: hpUI
       value: 
       objectReference: {fileID: 1307386313}
@@ -9209,6 +9223,10 @@ PrefabInstance:
       propertyPath: getCoinSE
       value: 
       objectReference: {fileID: 8300000, guid: 6517e19782734cd4da9e17afd51b0bcc, type: 3}
+    - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 1203363990}
     - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: hitEffectPrefab
       value: 

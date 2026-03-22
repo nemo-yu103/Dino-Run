@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class FluitsController : ScrollMap
 {
-    //public static FluitsController Instance;
-
+    
     void Start()
     {
         scrollSpeed = 4f;
@@ -20,10 +19,4 @@ public class FluitsController : ScrollMap
         }
 
     }
-
-    //public void GetFluits()
-    //{
-    //    scrollSpeed += 1f;
-    //}
-    
 }

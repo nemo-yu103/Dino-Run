@@ -39,6 +39,8 @@ public class ScrollMap : MonoBehaviour
         }
     }
 
+    
+
     public void PlayBGM()
     {
         AudioManager.Instance.PlayBGM(gameBGM,0.3f);

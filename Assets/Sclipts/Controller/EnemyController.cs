@@ -29,9 +29,4 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //public void GetFluits()
-    //{
-    //    ItemscrollSpeed += 1f;
-    //}
-
 }
