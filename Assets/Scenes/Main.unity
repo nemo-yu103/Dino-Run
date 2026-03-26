@@ -4019,6 +4019,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432977666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &737916821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737916823}
+  - component: {fileID: 737916824}
+  m_Layer: 0
+  m_Name: ScrollManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737916823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737916821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05405, y: 0.61896, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737916824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737916821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be8b862da5f6ea428cf66081a1432fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScrollManager
+  baseScrollSpeed: 4
+  isDashing: 0
+  dashScrollSpeed: 8
 --- !u!1 &779138428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5694,12 +5741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8a1875c9f0a9a46ad19b74987bc0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollBackground
-  dashScrollSpeed: 8
-  baseScrollSpeed: 1
-  scrollSpeed: 0
   resetPositionX: -41
   startPositionX: 0.02
-  isDashing: 0
 --- !u!1 &1216980718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7685,13 +7728,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollMap
   gameBGM: {fileID: 8300000, guid: 92b4d2488ad2d9a47a988ba7acdc5e44, type: 3}
-  baseScrollSpeed: 4
-  dashScrollSpeed: 8
-  scrollSpeed: 4
   resetPositionX: -17.25
   startPositionX: 3
   isScrolling: 1
-  isDashing: 0
 --- !u!1 &1674400505
 GameObject:
   m_ObjectHideFlags: 0
@@ -8500,12 +8539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8a1875c9f0a9a46ad19b74987bc0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollBackground
-  dashScrollSpeed: 8
-  baseScrollSpeed: 0.5
-  scrollSpeed: 0
   resetPositionX: -41
   startPositionX: 0.02
-  isDashing: 0
 --- !u!1 &1863340527
 GameObject:
   m_ObjectHideFlags: 0
@@ -9227,6 +9262,10 @@ PrefabInstance:
       propertyPath: background
       value: 
       objectReference: {fileID: 1203363990}
+    - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 674929031721522668, guid: 284b35285acdf0842863ed9079de875c, type: 3}
     - target: {fileID: 2306656700015574169, guid: 6ce959486897dd441b3e5005a1b9b32d, type: 3}
       propertyPath: hitEffectPrefab
       value: 
@@ -9961,6 +10000,7 @@ SceneRoots:
   - {fileID: 417317998}
   - {fileID: 432977666}
   - {fileID: 1055160506}
+  - {fileID: 737916823}
   - {fileID: 548563165}
   - {fileID: 1806599175}
   - {fileID: 209407595}

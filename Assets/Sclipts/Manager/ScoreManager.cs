@@ -21,6 +21,11 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
+        if (ScrollManager.Instance == null)
+        {
+            return;
+        }
+
         if (judge.gameNow == true)
         {
             timeScore += Time.deltaTime;

@@ -7,12 +7,9 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
 
     [SerializeField] UI_HP uI_HP;
-    [SerializeField] ScrollMap map;
-    [SerializeField] ScrollBackground background;
-
-
-
-
+    //[SerializeField] ScrollMap map;
+    //[SerializeField] ScrollBackground background;
+    //[SerializeField] EnemyController enemyController;
 
     [SerializeField] private AudioClip jumpSE;
     [SerializeField] private AudioClip getCoinSE;
@@ -30,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public bool isSurvival = true;
     private bool isSEPlaying = false;
     private bool isFastFalling = false;
+    public bool isDashing = false;
 
     float dashSpeed = 5f;
     float dashTime = 2f;
@@ -122,7 +120,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //É_ÉÅÅ[ÉWÇéÛÇØÇÈ
-        if (collision.gameObject.CompareTag("Enemy") && !map.isDashing)
+        if (collision.gameObject.CompareTag("Enemy") && !isDashing)
         {
             Damage();
             AudioManager.Instance.PlaySE(damageSE,1.2f);
@@ -162,12 +160,6 @@ public class PlayerController : MonoBehaviour
             {
                 AudioManager.Instance.PlaySE(bananaSE,1.2f);
                 Destroy(collision.gameObject);
-
-                map.isDashing = true;
-                background.isDashing = true;
-
-
-
                 Invoke(nameof(DashEnd), dashTime);
             }
            
@@ -177,8 +169,7 @@ public class PlayerController : MonoBehaviour
 
     public void DashEnd()
     {
-        map.isDashing = false;
-        background.isDashing = false;
+        isDashing = false;
     }
 
     public void Damage()

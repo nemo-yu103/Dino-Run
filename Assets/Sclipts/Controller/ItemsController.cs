@@ -21,7 +21,16 @@ public class ItemsController : MonoBehaviour
     {
         if (isSurvival)
         {
-            transform.position += Vector3.left * ItemscrollSpeed * Time.deltaTime;
+            if (ScrollManager.Instance == null)
+            {
+                return;
+            }
+
+            
+
+            float speed = ScrollManager.Instance.GetSpeed();
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+
             if (transform.position.x <= -10)
             {
                 Destroy(gameObject);
@@ -34,10 +43,5 @@ public class ItemsController : MonoBehaviour
         isSurvival = false;
         
     }
-
-    //public void GetFluits()
-    //{
-    //    ItemscrollSpeed += 1f;
-    //}
 
 }

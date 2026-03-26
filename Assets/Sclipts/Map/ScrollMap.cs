@@ -5,34 +5,34 @@ public class ScrollMap : MonoBehaviour
     public static ScrollMap Instance;
 
     [SerializeField] private AudioClip gameBGM;
+    
 
-    public float baseScrollSpeed = 4f;
-    public float dashScrollSpeed = 8f;
-    public float scrollSpeed;
-    public float resetPositionX;
-    public float startPositionX;
+    //public float baseScrollSpeed = 4f;
+    //public float dashScrollSpeed = 8f;
+    //public float scrollSpeed;
+    public float resetPositionX = -17.25f;
+    public float startPositionX = 3f;
 
     public bool isScrolling = true;
-    public bool isDashing = false;
+    //public bool isDashing = false;
 
     void Start()
     {
-        resetPositionX = -17.25f;
-        startPositionX = 3f;
+        
     }
 
     void Update()
     {
-        if (!isScrolling) return;
-
-        scrollSpeed = baseScrollSpeed;
-
-        if (isDashing)
+        if (ScrollManager.Instance == null)
         {
-            scrollSpeed += dashScrollSpeed;
+            return;
         }
 
-        transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
+        if (!isScrolling) return;
+
+        float speed = ScrollManager.Instance.GetSpeed();
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
+
         if (transform.position.x <= resetPositionX)
         {
             transform.position = new Vector3(startPositionX,transform.position.y,transform.position.z);

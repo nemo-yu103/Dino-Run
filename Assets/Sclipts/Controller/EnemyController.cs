@@ -4,19 +4,29 @@ public class EnemyController : MonoBehaviour
 {
     public static EnemyController Instance;
 
-    float ItemscrollSpeed;
+    //public float baseScrollSpeed = 4f;
+    //public float dashScrollSpeed = 8f;
+    //public float scrollSpeed;
     private bool isSurvival = true;
+    //public bool isDashing = false;
 
     void Start()
     {
-        ItemscrollSpeed = 4f;
+        
     }
 
     void Update()
     {
+        if (ScrollManager.Instance == null)
+        {
+            return;
+        }
+
         if (!isSurvival) return;
 
-        transform.position += Vector3.left * ItemscrollSpeed * Time.deltaTime;
+        float speed = ScrollManager.Instance.GetSpeed();
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
+
         if (transform.position.x <= -10)
         {
             Destroy(gameObject);
