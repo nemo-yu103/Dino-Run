@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //É_ÉÅÅ[ÉWÇéÛÇØÇÈ
-        if (collision.gameObject.CompareTag("Enemy") && !isDashing)
+        if (collision.gameObject.CompareTag("Enemy") && !ScrollManager.Instance.isDashing)
         {
             Damage();
             AudioManager.Instance.PlaySE(damageSE,1.2f);
@@ -160,6 +160,7 @@ public class PlayerController : MonoBehaviour
             {
                 AudioManager.Instance.PlaySE(bananaSE,1.2f);
                 Destroy(collision.gameObject);
+                ScrollManager.Instance.isDashing = true;
                 Invoke(nameof(DashEnd), dashTime);
             }
            
@@ -169,7 +170,7 @@ public class PlayerController : MonoBehaviour
 
     public void DashEnd()
     {
-        isDashing = false;
+        ScrollManager.Instance.isDashing = false;
     }
 
     public void Damage()

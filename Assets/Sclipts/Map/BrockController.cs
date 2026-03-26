@@ -4,21 +4,25 @@ public class BrockController : MonoBehaviour
 {
     public static BrockController Instance;
 
-    public float scrollSpeed;
-
     private bool isScrolling = true;
     void Start()
     {
-        scrollSpeed = 4f;
+        
     }
 
     void Update()
     {
+        if (ScrollManager.Instance == null)
+        {
+            return;
+        }
+
         if (!isScrolling) return;
 
-        transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
+        float speed = ScrollManager.Instance.GetSpeed();
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
-        if(transform.position.x < -11f)
+        if (transform.position.x < -11f)
         {
             Destroy(gameObject);
         }
